@@ -18,6 +18,8 @@
 		3FC0C4C32BE05319000A93F8 /* OmdbApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4C22BE05319000A93F8 /* OmdbApi.swift */; };
 		3FC0C4C52BE0584A000A93F8 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4C42BE0584A000A93F8 /* MovieViewModel.swift */; };
 		3FC0C4C72BE05A58000A93F8 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4C62BE05A58000A93F8 /* MovieView.swift */; };
+		3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */; };
+		3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		3FC0C4C22BE05319000A93F8 /* OmdbApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmdbApi.swift; sourceTree = "<group>"; };
 		3FC0C4C42BE0584A000A93F8 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		3FC0C4C62BE05A58000A93F8 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarStrip.swift; sourceTree = "<group>"; };
+		3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		3FC0C4B92BE0408D000A93F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3FC0C4CA2BE05FE3000A93F8 /* Helper */,
 				3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */,
 				3FC0C4C62BE05A58000A93F8 /* MovieView.swift */,
 			);
@@ -126,6 +131,15 @@
 				3FC0C4C02BE05091000A93F8 /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3FC0C4CA2BE05FE3000A93F8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */,
+				3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +218,8 @@
 				3FC0C4C52BE0584A000A93F8 /* MovieViewModel.swift in Sources */,
 				3FC0C4C72BE05A58000A93F8 /* MovieView.swift in Sources */,
 				3FC0C4C12BE05091000A93F8 /* Movie.swift in Sources */,
+				3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */,
+				3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */,
 				3FC0C4A72BE03FB5000A93F8 /* CinematicApp.swift in Sources */,
 				3FC0C4BD2BE04EE3000A93F8 /* Api.swift in Sources */,
 				3FC0C4B32BE03FB9000A93F8 /* cinematic.xcdatamodeld in Sources */,

@@ -5,18 +5,8 @@ struct MovieView: View {
     
     private func content(movie: Movie) -> some View {
         VStack(spacing: 16) {
-            if let imageUrl = movie.image {
-                AsyncImage(
-                    url: URL(string: imageUrl),
-                    content: { image in image
-                            .resizable()
-                            .frame(width: 100, height: 148)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                    },
-                    placeholder: {}
-                )
+            MoviePoster(movie: movie)
                 .padding(.top)
-            }
             
             Text(movie.title)
                 .font(.largeTitle.bold())
@@ -28,8 +18,18 @@ struct MovieView: View {
             .foregroundStyle(.secondary)
             
             if let stars = vm.stars {
-                Text(String(stars))
+                StarStrip(amount: stars)
+                    .padding(.vertical)
             }
+            
+            VStack(alignment: .leading) {
+                Text(movie.plot)
+                
+                Text(movie.director)
+                    .foregroundStyle(.secondary)
+                    .padding(.vertical)
+            }
+            .padding(.horizontal)
         }
     }
     
