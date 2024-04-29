@@ -9,6 +9,11 @@ import Foundation
         self.movieId = movieId
     }
     
+    var stars: Int? {
+        guard let rating = movie?.rating else { return nil }
+        return Int((Double(rating) / 20.0).rounded())
+    }
+    
     func load() async {
         do {
             let movie = try await OmdbApi.getMovie(id: movieId)
