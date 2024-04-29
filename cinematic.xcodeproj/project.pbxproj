@@ -55,11 +55,11 @@
 		3FC0C4A52BE03FB5000A93F8 /* cinematic */ = {
 			isa = PBXGroup;
 			children = (
+				3FC0C4BB2BE048BD000A93F8 /* Resources */,
+				3FC0C4BA2BE048A7000A93F8 /* ViewModel */,
 				3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */,
 				3FC0C4B92BE0408D000A93F8 /* View */,
 				3FC0C4AA2BE03FB9000A93F8 /* Assets.xcassets */,
-				3FC0C4AF2BE03FB9000A93F8 /* Persistence.swift */,
-				3FC0C4B12BE03FB9000A93F8 /* cinematic.xcdatamodeld */,
 				3FC0C4AC2BE03FB9000A93F8 /* Preview Content */,
 			);
 			path = cinematic;
@@ -79,6 +79,22 @@
 				3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3FC0C4BA2BE048A7000A93F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FC0C4AF2BE03FB9000A93F8 /* Persistence.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3FC0C4BB2BE048BD000A93F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FC0C4B12BE03FB9000A93F8 /* cinematic.xcdatamodeld */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
