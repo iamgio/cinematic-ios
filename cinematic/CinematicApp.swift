@@ -3,7 +3,7 @@
 import SwiftUI
 
 @main
-struct cinematicApp: App {
+struct CinematicApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FC0C4A72BE03FB5000A93F8 /* cinematicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A62BE03FB5000A93F8 /* cinematicApp.swift */; };
+		3FC0C4A72BE03FB5000A93F8 /* CinematicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */; };
 		3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */; };
 		3FC0C4AB2BE03FB9000A93F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4AA2BE03FB9000A93F8 /* Assets.xcassets */; };
 		3FC0C4AE2BE03FB9000A93F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4AD2BE03FB9000A93F8 /* Preview Assets.xcassets */; };
@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		3FC0C4A32BE03FB5000A93F8 /* cinematic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinematic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FC0C4A62BE03FB5000A93F8 /* cinematicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinematicApp.swift; sourceTree = "<group>"; };
+		3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinematicApp.swift; sourceTree = "<group>"; };
 		3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FC0C4AA2BE03FB9000A93F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FC0C4AD2BE03FB9000A93F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -55,8 +55,8 @@
 		3FC0C4A52BE03FB5000A93F8 /* cinematic */ = {
 			isa = PBXGroup;
 			children = (
-				3FC0C4A62BE03FB5000A93F8 /* cinematicApp.swift */,
-				3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */,
+				3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */,
+				3FC0C4B92BE0408D000A93F8 /* View */,
 				3FC0C4AA2BE03FB9000A93F8 /* Assets.xcassets */,
 				3FC0C4AF2BE03FB9000A93F8 /* Persistence.swift */,
 				3FC0C4B12BE03FB9000A93F8 /* cinematic.xcdatamodeld */,
@@ -71,6 +71,14 @@
 				3FC0C4AD2BE03FB9000A93F8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FC0C4B92BE0408D000A93F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +153,7 @@
 			files = (
 				3FC0C4B02BE03FB9000A93F8 /* Persistence.swift in Sources */,
 				3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */,
-				3FC0C4A72BE03FB5000A93F8 /* cinematicApp.swift in Sources */,
+				3FC0C4A72BE03FB5000A93F8 /* CinematicApp.swift in Sources */,
 				3FC0C4B32BE03FB9000A93F8 /* cinematic.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
