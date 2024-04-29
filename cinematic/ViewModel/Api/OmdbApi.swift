@@ -9,7 +9,7 @@ struct OmdbApi {
     }
     
     static func getMovie(id: String) async throws -> Movie {
-        let movie: DecodableMovie = try await sendGetRequest(endpoint: "id=\(title)")
+        let movie: DecodableMovie = try await sendGetRequest(endpoint: "i=\(id)")
         return movie.toMovie()
     }
 }
