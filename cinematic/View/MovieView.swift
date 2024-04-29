@@ -34,16 +34,19 @@ struct MovieView: View {
     }
     
     var body: some View {
-        if let movie = vm.movie {
-            ScrollView {
-                content(movie: movie)
-            }
-        } else {
-            ProgressView()
-                .task {
-                    await vm.load()
+        Group {
+            if let movie = vm.movie {
+                ScrollView {
+                    content(movie: movie)
                 }
+            } else {
+                ProgressView()
+                    .task {
+                        await vm.load()
+                    }
+            }
         }
+        .background(Color.background.ignoresSafeArea())
     }
 }
 

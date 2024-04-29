@@ -12,6 +12,7 @@ struct StarStrip: View {
         HStack {
             ForEach(0..<max, id: \.self) { i in
                 Image(systemName: i < amount ? "star.fill" : "star")
+                    .foregroundStyle(.accent)
             }
         }
     }
