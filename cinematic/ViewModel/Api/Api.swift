@@ -4,7 +4,7 @@ import Foundation
 let apiBaseUrl = "http://www.omdbapi.com/?apikey=44ade1ff"
 
 private func getEndpointURL(endpoint: String) -> URL {
-    URL(string: "\(apiBaseUrl)/\(endpoint)")!
+    URL(string: "\(apiBaseUrl)&\(endpoint)")!
 }
 
 /// Sends an HTTP request.
