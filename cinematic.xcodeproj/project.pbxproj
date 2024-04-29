@@ -20,6 +20,7 @@
 		3FC0C4C72BE05A58000A93F8 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4C62BE05A58000A93F8 /* MovieView.swift */; };
 		3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */; };
 		3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */; };
+		3FC0C4D02BE06393000A93F8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3FC0C4C62BE05A58000A93F8 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarStrip.swift; sourceTree = "<group>"; };
 		3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
+		3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC0C4B12BE03FB9000A93F8 /* cinematic.xcdatamodeld */,
+				3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				3FC0C4AE2BE03FB9000A93F8 /* Preview Assets.xcassets in Resources */,
 				3FC0C4AB2BE03FB9000A93F8 /* Assets.xcassets in Resources */,
+				3FC0C4D02BE06393000A93F8 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@ struct MovieView: View {
             VStack(alignment: .leading) {
                 Text(movie.plot)
                 
-                Text(movie.director)
+                Text("movie.director \(movie.director)")
                     .foregroundStyle(.secondary)
                     .padding(.vertical)
             }
