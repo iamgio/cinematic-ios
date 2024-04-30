@@ -1,4 +1,5 @@
 import Foundation
+import CoreData
 
 @Observable class MovieViewModel {
     let movieId: String
@@ -12,6 +13,15 @@ import Foundation
     var stars: Int? {
         guard let rating = movie?.rating else { return nil }
         return Int((Double(rating) / 20.0).rounded())
+    }
+    
+    var isWatched: Bool {
+        let request = NSFetchRequest<MovieEntity>(entityName: "MovieEntity")
+        request.predicate = NSPredicate(format: "id == %@", movieId)
+        
+        return PersistenceController.shared.fetch(request: request, orDefault: false) { result in
+            result.first?.watched
+        }
     }
     
     func load() async {

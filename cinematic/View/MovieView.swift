@@ -30,6 +30,8 @@ struct MovieView: View {
                     .padding(.vertical)
             }
             .padding(.horizontal)
+            
+            Text(vm.isWatched ? "watched" : "unwatched")
         }
     }
     

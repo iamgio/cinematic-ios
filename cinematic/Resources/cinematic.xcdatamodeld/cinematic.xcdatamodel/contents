@@ -3,5 +3,6 @@
     <entity name="MovieEntity" representedClassName="MovieEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="watched" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
 </model>
