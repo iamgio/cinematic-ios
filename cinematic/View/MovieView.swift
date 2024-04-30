@@ -31,7 +31,9 @@ struct MovieView: View {
             }
             .padding(.horizontal)
             
-            Text(vm.isWatched ? "watched" : "unwatched")
+            Button(vm.isWatched ? "watched" : "unwatched") {
+                vm.isWatched = !vm.isWatched
+            }
         }
     }
     

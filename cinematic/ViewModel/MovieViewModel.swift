@@ -16,19 +16,35 @@ import CoreData
     }
     
     var isWatched: Bool {
-        let request = NSFetchRequest<MovieEntity>(entityName: "MovieEntity")
-        request.predicate = NSPredicate(format: "id == %@", movieId)
-        
-        return PersistenceController.shared.fetch(request: request, orDefault: false) { result in
-            result.first?.watched
+        get {
+            let request = DataRequests.getMovie(id: movieId)
+            
+            return PersistenceController.shared.fetch(request: request, orDefault: false) { result in
+                result.first?.watched
+            }
+        }
+        set {
+            let request = DataRequests.getMovie(id: movieId)
+            
+            return PersistenceController.shared.fetch(request: request) { result in
+                result.first?.watched = newValue
+                PersistenceController.shared.save()
+            }
         }
     }
     
     func load() async {
         do {
             let movie = try await OmdbApi.getMovie(id: movieId)
+            
+            let entity = MovieEntity(context: PersistenceController.shared.context)
+            entity.id = movieId
+            entity.title = movie.title
+            entity.image = movie.image
+            
             DispatchQueue.main.sync {
                 self.movie = movie
+                PersistenceController.shared.save()
             }
         } catch {
             print("Error loading movie: \(error)")

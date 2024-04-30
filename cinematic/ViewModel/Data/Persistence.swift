@@ -29,6 +29,10 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
     
+    var context: NSManagedObjectContext {
+        container.viewContext
+    }
+    
     /// Fetches results.
     func fetch<Result : NSFetchRequestResult, T>(
         request: NSFetchRequest<Result>,
@@ -36,11 +40,32 @@ struct PersistenceController {
         result: ([Result]) -> T?
     ) -> T {
         do {
-            let fetched: [Result] = try container.viewContext.fetch(request)
+            let fetched: [Result] = try context.fetch(request)
             return result(fetched) ?? orDefault
         } catch {
             print("Error while fetching: \(error)")
             return orDefault
+        }
+    }
+    
+    /// Fetches results without returning them.
+    func fetch<Result : NSFetchRequestResult>(
+        request: NSFetchRequest<Result>,
+        result: ([Result]) -> ()
+    ) {
+        do {
+            let fetched: [Result] = try context.fetch(request)
+            result(fetched)
+        } catch {
+            print("Error while fetching: \(error)")
+        }
+    }
+    
+    func save() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving: \(error)")
         }
     }
 }
