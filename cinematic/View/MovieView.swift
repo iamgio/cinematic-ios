@@ -31,9 +31,24 @@ struct MovieView: View {
             }
             .padding(.horizontal)
             
-            Button(vm.isWatched ? "watched" : "unwatched") {
-                vm.isWatched = !vm.isWatched
+            // Watched/unwatched
+            Button {
+                withAnimation {
+                    vm.isWatched = !vm.isWatched
+                }
+            } label: {
+                Label(
+                    "movie.watched",
+                    systemImage: vm.isWatched ? "checkmark" : "plus"
+                )
+                .bold()
+                .padding(EdgeInsets(
+                    top: 8, leading: 20, bottom: 8, trailing: 24
+                ))
             }
+            .buttonStyle(.borderedProminent)
+            .foregroundColor(vm.isWatched ? .confirm : .primary)
+            .tint(vm.isWatched ? .confirmBackground : .overlayPrimary)
         }
     }
     

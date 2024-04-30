@@ -12,6 +12,17 @@
         }
       }
     },
+    "movie.watched" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watched"
+          }
+        }
+      }
+    },
     "unwatched" : {
 
     },
