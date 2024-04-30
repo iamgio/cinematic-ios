@@ -5,6 +5,7 @@ import CoreData
     let movieId: String
     
     var movie: Movie? = nil
+    var entity: MovieEntity? = nil
     
     init(movieId: String) {
         self.movieId = movieId
@@ -15,21 +16,10 @@ import CoreData
         return Int((Double(rating) / 20.0).rounded())
     }
     
-    var isWatched: Bool {
-        get {
-            let request = DataRequests.getMovie(id: movieId)
-            
-            return PersistenceController.shared.fetch(request: request, orDefault: false) { result in
-                result.first?.watched
-            }
-        }
-        set {
-            let request = DataRequests.getMovie(id: movieId)
-            
-            return PersistenceController.shared.fetch(request: request) { result in
-                result.first?.watched = newValue
-                PersistenceController.shared.save()
-            }
+    var isWatched = false {
+        willSet {
+            entity?.watched = newValue
+            PersistenceController.shared.save()
         }
     }
     
@@ -37,13 +27,19 @@ import CoreData
         do {
             let movie = try await OmdbApi.getMovie(id: movieId)
             
-            let entity = MovieEntity(context: PersistenceController.shared.context)
+            let entity = PersistenceController.shared.fetch(
+                request: DataRequests.getMovie(id: movieId),
+                orDefault: { MovieEntity(context: PersistenceController.shared.context) }
+            ) { $0.first }
+            
             entity.id = movieId
             entity.title = movie.title
             entity.image = movie.image
             
             DispatchQueue.main.sync {
                 self.movie = movie
+                self.entity = entity
+                self.isWatched = entity.watched
                 PersistenceController.shared.save()
             }
         } catch {

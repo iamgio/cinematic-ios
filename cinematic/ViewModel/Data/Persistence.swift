@@ -36,15 +36,15 @@ struct PersistenceController {
     /// Fetches results.
     func fetch<Result : NSFetchRequestResult, T>(
         request: NSFetchRequest<Result>,
-        orDefault: T,
+        orDefault: () -> T,
         result: ([Result]) -> T?
     ) -> T {
         do {
             let fetched: [Result] = try context.fetch(request)
-            return result(fetched) ?? orDefault
+            return result(fetched) ?? orDefault()
         } catch {
             print("Error while fetching: \(error)")
-            return orDefault
+            return orDefault()
         }
     }
     
