@@ -10,4 +10,11 @@ struct DataRequests {
         
         return request
     }
+    
+    static func getUser() -> NSFetchRequest<UserEntity> {
+        let request = UserEntity.fetchRequest()
+        request.fetchLimit = 1
+        
+        return request
+    }
 }

@@ -24,6 +24,8 @@
 		3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */; };
 		3FC0C4D02BE06393000A93F8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */; };
 		3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */; };
+		3FF1072F2BE2FCB000DA617B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072E2BE2FCB000DA617B /* UserView.swift */; };
+		3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF107302BE2FCCE00DA617B /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 		3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistButton.swift; sourceTree = "<group>"; };
+		3FF1072E2BE2FCB000DA617B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		3FF107302BE2FCCE00DA617B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				3FC0C4CA2BE05FE3000A93F8 /* Helper */,
 				3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */,
 				3FC0C4C62BE05A58000A93F8 /* MovieView.swift */,
+				3FF1072E2BE2FCB000DA617B /* UserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				3FC0C4BE2BE04EE8000A93F8 /* Api */,
 				3F2B35B92BE10238006D0727 /* Data */,
 				3FC0C4C42BE0584A000A93F8 /* MovieViewModel.swift */,
+				3FF107302BE2FCCE00DA617B /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,7 +246,9 @@
 				3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */,
 				3F06041B2BE2F11000259BAE /* WatchUnwatchButton.swift in Sources */,
 				3FC0C4C52BE0584A000A93F8 /* MovieViewModel.swift in Sources */,
+				3FF1072F2BE2FCB000DA617B /* UserView.swift in Sources */,
 				3FC0C4C72BE05A58000A93F8 /* MovieView.swift in Sources */,
+				3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */,
 				3FC0C4C12BE05091000A93F8 /* Movie.swift in Sources */,
 				3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */,
 				3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */,
