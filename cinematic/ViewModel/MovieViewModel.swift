@@ -19,6 +19,18 @@ import CoreData
     var isWatched = false {
         willSet {
             entity?.watched = newValue
+            
+            if newValue {
+                self.isInWatchlist = false
+            }
+            
+            PersistenceController.shared.save()
+        }
+    }
+    
+    var isInWatchlist = false {
+        willSet {
+            entity?.inWatchlist = newValue
             PersistenceController.shared.save()
         }
     }
@@ -40,6 +52,7 @@ import CoreData
                 self.movie = movie
                 self.entity = entity
                 self.isWatched = entity.watched
+                self.isInWatchlist = entity.inWatchlist
                 PersistenceController.shared.save()
             }
         } catch {

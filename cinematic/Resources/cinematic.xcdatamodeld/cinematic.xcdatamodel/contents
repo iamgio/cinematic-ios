@@ -3,6 +3,7 @@
     <entity name="MovieEntity" representedClassName="MovieEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="inWatchlist" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="watched" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>

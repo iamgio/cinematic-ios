@@ -12,6 +12,26 @@
         }
       }
     },
+    "movie.inwatchlist" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In watchlist"
+          }
+        }
+      }
+    },
+    "movie.notinwatchlist" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to watchlist"
+          }
+        }
+      }
+    },
     "movie.unwatched" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -23,6 +23,7 @@
 		3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */; };
 		3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */; };
 		3FC0C4D02BE06393000A93F8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */; };
+		3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarStrip.swift; sourceTree = "<group>"; };
 		3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 		3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */,
 				3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */,
 				3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */,
+				3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				3FC0C4B02BE03FB9000A93F8 /* Persistence.swift in Sources */,
 				3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */,
 				3FC0C4C32BE05319000A93F8 /* OmdbApi.swift in Sources */,
+				3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */,
 				3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */,
 				3F06041B2BE2F11000259BAE /* WatchUnwatchButton.swift in Sources */,
 				3FC0C4C52BE0584A000A93F8 /* MovieViewModel.swift in Sources */,

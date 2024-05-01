@@ -31,8 +31,10 @@ struct MovieView: View {
             }
             .padding(.horizontal)
             
-            // Watched/unwatched
             WatchUnwatchButton(isWatched: $vm.isWatched)
+            
+            WatchlistButton(isInWatchlist: $vm.isInWatchlist)
+                .padding(.top, 8)
         }
     }
     
