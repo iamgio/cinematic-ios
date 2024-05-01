@@ -13,7 +13,6 @@ struct WatchlistButton: View {
                 isInWatchlist ? "movie.inwatchlist" : "movie.notinwatchlist",
                 systemImage: isInWatchlist ? "checkmark" : "plus"
             )
-            .bold()
         }
         .foregroundStyle(.primary)
     }
