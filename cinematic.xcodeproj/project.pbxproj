@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F06041B2BE2F11000259BAE /* WatchUnwatchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */; };
 		3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B35BA2BE10246006D0727 /* DataRequests.swift */; };
 		3FC0C4A72BE03FB5000A93F8 /* CinematicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */; };
 		3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUnwatchButton.swift; sourceTree = "<group>"; };
 		3F2B35BA2BE10246006D0727 /* DataRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequests.swift; sourceTree = "<group>"; };
 		3FC0C4A32BE03FB5000A93F8 /* cinematic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinematic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinematicApp.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */,
 				3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */,
+				3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */,
 				3FC0C4C32BE05319000A93F8 /* OmdbApi.swift in Sources */,
 				3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */,
+				3F06041B2BE2F11000259BAE /* WatchUnwatchButton.swift in Sources */,
 				3FC0C4C52BE0584A000A93F8 /* MovieViewModel.swift in Sources */,
 				3FC0C4C72BE05A58000A93F8 /* MovieView.swift in Sources */,
 				3FC0C4C12BE05091000A93F8 /* Movie.swift in Sources */,

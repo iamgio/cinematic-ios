@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MovieView: View {
-    var vm: MovieViewModel
+    @Bindable var vm: MovieViewModel
     
     private func content(movie: Movie) -> some View {
         VStack(spacing: 16) {
@@ -32,23 +32,7 @@ struct MovieView: View {
             .padding(.horizontal)
             
             // Watched/unwatched
-            Button {
-                withAnimation {
-                    vm.isWatched = !vm.isWatched
-                }
-            } label: {
-                Label(
-                    "movie.watched",
-                    systemImage: vm.isWatched ? "checkmark" : "plus"
-                )
-                .bold()
-                .padding(EdgeInsets(
-                    top: 8, leading: 20, bottom: 8, trailing: 24
-                ))
-            }
-            .buttonStyle(.borderedProminent)
-            .foregroundColor(vm.isWatched ? .confirm : .primary)
-            .tint(vm.isWatched ? .confirmBackground : .overlayPrimary)
+            WatchUnwatchButton(isWatched: $vm.isWatched)
         }
     }
     

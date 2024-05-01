@@ -12,6 +12,17 @@
         }
       }
     },
+    "movie.unwatched" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch"
+          }
+        }
+      }
+    },
     "movie.watched" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -22,12 +33,6 @@
           }
         }
       }
-    },
-    "unwatched" : {
-
-    },
-    "watched" : {
-
     }
   },
   "version" : "1.0"
