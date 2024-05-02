@@ -55,7 +55,9 @@ struct MovieView: View {
     }
     
     var body: some View {
-        Group {
+        ZStack {
+            Color.background.ignoresSafeArea()
+            
             if let movie = vm.movie {
                 ScrollView {
                     content(movie: movie)
@@ -67,7 +69,6 @@ struct MovieView: View {
                     }
             }
         }
-        .background(Color.background.ignoresSafeArea())
     }
 }
 
