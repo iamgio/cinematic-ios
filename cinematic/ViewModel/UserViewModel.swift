@@ -32,6 +32,13 @@ import UIKit
         }
     }
     
+    var watched: [MovieEntity] {
+        return PersistenceController.shared.fetch(
+            request: DataRequests.getWatched(),
+            orDefault: { [] }
+        ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
+    }
+    
     func load() {
         let entity = PersistenceController.shared.fetch(
             request: DataRequests.getUser(),

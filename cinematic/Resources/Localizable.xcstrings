@@ -94,6 +94,28 @@
           }
         }
       }
+    },
+    "user.watched" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watched"
+          }
+        }
+      }
+    },
+    "user.watchlist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To watch"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

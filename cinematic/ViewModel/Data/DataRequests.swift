@@ -17,4 +17,11 @@ struct DataRequests {
         
         return request
     }
+    
+    static func getWatched() -> NSFetchRequest<MovieEntity> {
+        let request = MovieEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "watched == true")
+        
+        return request
+    }
 }

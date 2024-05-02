@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct MoviePoster: View {
-    var movie: Movie
+    var movie: any ThumbnailMovie
+    var withTitle: Bool
     
     var body: some View {
         let width = 100.0
@@ -12,18 +13,27 @@ struct MoviePoster: View {
             .frame(width: width, height: height)
             .foregroundStyle(.orange)
         
-        if let imageUrl = movie.image {
-            AsyncImage(
-                url: URL(string: imageUrl),
-                content: { image in image
-                        .resizable()
-                        .frame(width: width, height: height)
-                        .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-                },
-                placeholder: { placeholder }
-            )
-        } else {
-            placeholder
+        VStack {
+            if let imageUrl = movie.image {
+                AsyncImage(
+                    url: URL(string: imageUrl),
+                    content: { image in 
+                        image
+                            .resizable()
+                            .frame(width: width, height: height)
+                            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                    },
+                    placeholder: { placeholder }
+                )
+            } else {
+                placeholder
+            }
+            
+            if withTitle {
+                Text(movie.thumbnailTitle)
+                    .font(.caption)
+                    .padding(.top, 2)
+            }
         }
     }
 }

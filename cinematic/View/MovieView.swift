@@ -5,7 +5,7 @@ struct MovieView: View {
     
     private func content(movie: Movie) -> some View {
         VStack(spacing: 16) {
-            MoviePoster(movie: movie)
+            MoviePoster(movie: movie, withTitle: false)
                 .padding(.top)
             
             Text(movie.title)
@@ -56,5 +56,5 @@ struct MovieView: View {
 }
 
 #Preview {
-    MovieView(vm: MovieViewModel(movieId: "tt1375666"))
+    MovieView(vm: MovieViewModel(movieId: "tt0816692"))
 }

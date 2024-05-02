@@ -1,6 +1,7 @@
 import Foundation
 
-struct Movie {
+struct Movie: ThumbnailMovie {
+    var id: String?
     var title: String
     var plot: String
     var genre: String
@@ -9,9 +10,24 @@ struct Movie {
     var year: String
     var rating: Int?
     var image: String?
+    
+    var thumbnailTitle: String { title }
+}
+
+protocol ThumbnailMovie: Identifiable {
+    var id: String? { get }
+    var thumbnailTitle: String { get }
+    var image: String? { get }
+}
+
+extension MovieEntity: ThumbnailMovie {
+    var thumbnailTitle: String {
+        self.title ?? ""
+    }
 }
 
 struct DecodableMovie: Decodable {
+    var imdbID: String
     var Title: String
     var Plot: String
     var Genre: String
@@ -23,6 +39,7 @@ struct DecodableMovie: Decodable {
     
     func toMovie() -> Movie {
         Movie(
+            id: imdbID,
             title: Title,
             plot: Plot,
             genre: Genre,

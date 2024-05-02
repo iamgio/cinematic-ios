@@ -55,6 +55,9 @@ struct UserView: View {
                 Label(vm.location, systemImage: "mappin.and.ellipse")
                     .foregroundStyle(.secondary)
             }
+            
+            MovieRowShowcase(title: "user.watched", movies: vm.watched)
+                .padding(.top, 32)
         }
         .padding()
     }
