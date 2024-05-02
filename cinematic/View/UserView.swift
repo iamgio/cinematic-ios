@@ -5,6 +5,12 @@ import SwiftUI
 struct UserView: View {
     @Bindable var vm: UserViewModel
     
+    @Environment(\.editMode) private var editMode
+    
+    private var isEditing: Bool {
+        editMode?.wrappedValue.isEditing == true
+    }
+    
     private var header: some View {
         HStack {
             Text(vm.name)
@@ -24,28 +30,60 @@ struct UserView: View {
         }
     }
     
-    private var content: some View {
+    private var regularContent: some View {
         Group {
             header
             
-            if let bio = vm.bio {
-                Text(bio)
+            if !vm.bio.isEmpty {
+                Text(vm.bio)
             }
             
-            if let location = vm.location {
-                Text(location)
+            if !vm.location.isEmpty {
+                Label(vm.location, systemImage: "mappin.and.ellipse")
+                    .foregroundStyle(.secondary)
             }
+            
+            EditButton()
         }
         .padding()
     }
     
+    private var editContent: some View {
+        List {
+            Section {
+                TextField("user.name", text: $vm.name)
+            } header: {
+                Text("user.name")
+            }
+            
+            Section {
+                TextEditor(text: $vm.bio)
+            } header: {
+                Text("user.bio")
+            }
+            
+            Section {
+                TextField("user.location", text: $vm.location)
+            } header: {
+                Text("user.location")
+            }
+            
+            EditButton()
+        }
+        .listRowBackground(Color.overlayPrimary)
+        .scrollContentBackground(.hidden)
+    }
+    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.background.ignoresSafeArea()
+        ZStack {
+            Color.background.ignoresSafeArea()
+            
+            if isEditing {
+                editContent
+            } else {
                 ScrollView {
-                    VStack(spacing: 16) {
-                        content
+                    VStack(alignment: .leading) {
+                        regularContent
                     }
                 }
             }

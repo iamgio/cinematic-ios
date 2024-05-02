@@ -4,18 +4,21 @@ import UIKit
 @Observable class UserViewModel {
     private var entity: UserEntity? = nil
     
-    var name: String {
-        entity?.name ?? "-"
+    var name: String = "" {
+        willSet {
+            entity?.name = newValue
+            PersistenceController.shared.save()
+        }
     }
     
-    var bio: String? = nil {
+    var bio: String = "" {
         willSet {
             entity?.bio = newValue
             PersistenceController.shared.save()
         }
     }
     
-    var location: String? = nil {
+    var location: String = "" {
         willSet {
             entity?.location = newValue
             PersistenceController.shared.save()
@@ -39,8 +42,9 @@ import UIKit
             }
         ) { $0.first }
         
-        self.bio = entity.bio
-        self.location = entity.location
+        self.name = entity.name ?? ""
+        self.bio = entity.bio ?? ""
+        self.location = entity.location ?? ""
         self.picture = entity.picture.map { UIImage(data: $0) ?? UIImage() }
         self.entity = entity
         PersistenceController.shared.save()
