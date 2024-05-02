@@ -9,10 +9,11 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             MovieCollectionShowcase(movies: vm.results, type: .grid)
+                .navigationTitle("search.title")
+                .navigationBarTitleDisplayMode(vm.query.isEmpty ? .large : .inline)
                 .animation(.easeIn, value: vm.results)
                 .padding(.horizontal)
                 .background(Color.background.ignoresSafeArea())
-                .navigationTitle("search.title")
                 .searchable(text: $vm.query, prompt: "search.query.prompt")
                 .onChange(of: vm.query) { 
                     // Min query length
