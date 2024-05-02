@@ -3,6 +3,7 @@ import SwiftUI
 struct MoviePoster: View {
     var movie: any ThumbnailMovie
     var withTitle: Bool
+    var glow: Bool = false
     
     var body: some View {
         let width = 100.0
@@ -13,15 +14,30 @@ struct MoviePoster: View {
             .frame(width: width, height: height)
             .foregroundStyle(.orange)
         
+        // Async image builder
+        let imageBuilder: (Image) -> some View = { image in
+            image
+                .resizable()
+                .frame(width: width, height: height)
+                .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+        }
+        
         VStack {
             if let imageUrl = movie.image {
                 AsyncImage(
                     url: URL(string: imageUrl),
-                    content: { image in 
-                        image
-                            .resizable()
-                            .frame(width: width, height: height)
-                            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                    content: { image in
+                        // If the poster should have a glow effect
+                        if glow {
+                            ZStack {
+                                imageBuilder(image)
+                                    .blur(radius: 60)
+                                    .offset(y: -20)
+                                imageBuilder(image)
+                            }
+                        } else {
+                            imageBuilder(image)
+                        }
                     },
                     placeholder: { placeholder }
                 )
