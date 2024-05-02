@@ -27,6 +27,7 @@
 		3FF1072F2BE2FCB000DA617B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072E2BE2FCB000DA617B /* UserView.swift */; };
 		3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF107302BE2FCCE00DA617B /* UserViewModel.swift */; };
 		3FFAAB6A2BE3AA5000556611 /* MovieRowShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFAAB692BE3AA5000556611 /* MovieRowShowcase.swift */; };
+		3FFAAB6C2BE3B69A00556611 /* CustomEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		3FF1072E2BE2FCB000DA617B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		3FF107302BE2FCCE00DA617B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3FFAAB692BE3AA5000556611 /* MovieRowShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowShowcase.swift; sourceTree = "<group>"; };
+		3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */,
 				3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */,
 				3FFAAB692BE3AA5000556611 /* MovieRowShowcase.swift */,
+				3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				3FF1072F2BE2FCB000DA617B /* UserView.swift in Sources */,
 				3FC0C4C72BE05A58000A93F8 /* MovieView.swift in Sources */,
 				3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */,
+				3FFAAB6C2BE3B69A00556611 /* CustomEditButton.swift in Sources */,
 				3FC0C4C12BE05091000A93F8 /* Movie.swift in Sources */,
 				3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */,
 				3FFAAB6A2BE3AA5000556611 /* MovieRowShowcase.swift in Sources */,

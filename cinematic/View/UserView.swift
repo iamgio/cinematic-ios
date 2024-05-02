@@ -5,10 +5,10 @@ import SwiftUI
 struct UserView: View {
     @Bindable var vm: UserViewModel
     
-    @Environment(\.editMode) private var editMode
+    @State private var editMode: EditMode = .inactive
     
     private var isEditing: Bool {
-        editMode?.wrappedValue.isEditing == true
+        editMode.isEditing == true
     }
     
     private var header: some View {
@@ -35,7 +35,8 @@ struct UserView: View {
             
             Spacer()
             
-            EditButton()
+            CustomEditButton()
+                .environment(\.editMode, $editMode)
         }
     }
     
@@ -90,14 +91,16 @@ struct UserView: View {
     }
     
     var body: some View {
-        ZStack {
-            Color.background.ignoresSafeArea()
-            
-            if isEditing {
-                editContent
-            } else {
-                ScrollView {
-                    regularContent
+        NavigationStack {
+            ZStack {
+                Color.background.ignoresSafeArea()
+                
+                if isEditing {
+                    editContent
+                } else {
+                    ScrollView {
+                        regularContent
+                    }
                 }
             }
         }
