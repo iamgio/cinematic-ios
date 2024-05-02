@@ -34,6 +34,17 @@
         }
       }
     },
+    "movie.favorite" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorite"
+          }
+        }
+      }
+    },
     "movie.inwatchlist" : {
       "localizations" : {
         "en" : {

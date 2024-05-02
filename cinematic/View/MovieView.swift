@@ -31,10 +31,17 @@ struct MovieView: View {
             }
             .padding(.horizontal)
             
-            WatchUnwatchButton(isWatched: $vm.isWatched)
-            
-            WatchlistButton(isInWatchlist: $vm.isInWatchlist)
-                .padding(.top, 8)
+            VStack(spacing: 24) {
+                WatchUnwatchButton(isWatched: $vm.isWatched)
+                
+                if vm.isWatched {
+                    FavoriteButton(isFavorite: $vm.isFavorite)
+                        .padding(.bottom)
+                }
+                
+                WatchlistButton(isInWatchlist: $vm.isInWatchlist)
+                    .foregroundStyle(vm.isWatched ? .secondary : .primary)
+            }
         }
     }
     

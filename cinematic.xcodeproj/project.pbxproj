@@ -28,6 +28,7 @@
 		3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF107302BE2FCCE00DA617B /* UserViewModel.swift */; };
 		3FFAAB6A2BE3AA5000556611 /* MovieRowShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFAAB692BE3AA5000556611 /* MovieRowShowcase.swift */; };
 		3FFAAB6C2BE3B69A00556611 /* CustomEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */; };
+		3FFAAB6E2BE3C0DE00556611 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFAAB6D2BE3C0DE00556611 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		3FF107302BE2FCCE00DA617B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3FFAAB692BE3AA5000556611 /* MovieRowShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowShowcase.swift; sourceTree = "<group>"; };
 		3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditButton.swift; sourceTree = "<group>"; };
+		3FFAAB6D2BE3C0DE00556611 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */,
 				3FFAAB692BE3AA5000556611 /* MovieRowShowcase.swift */,
 				3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */,
+				3FFAAB6D2BE3C0DE00556611 /* FavoriteButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC0C4B02BE03FB9000A93F8 /* Persistence.swift in Sources */,
+				3FFAAB6E2BE3C0DE00556611 /* FavoriteButton.swift in Sources */,
 				3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */,
 				3FC0C4C32BE05319000A93F8 /* OmdbApi.swift in Sources */,
 				3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */,

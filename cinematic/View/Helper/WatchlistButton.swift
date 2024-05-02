@@ -14,7 +14,6 @@ struct WatchlistButton: View {
                 systemImage: isInWatchlist ? "checkmark" : "plus"
             )
         }
-        .foregroundStyle(.primary)
     }
 }
 

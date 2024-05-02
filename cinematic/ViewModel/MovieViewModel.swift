@@ -35,6 +35,13 @@ import CoreData
         }
     }
     
+    var isFavorite = false {
+        willSet {
+            entity?.favorite = newValue
+            PersistenceController.shared.save()
+        }
+    }
+    
     func load() async {
         do {
             let movie = try await OmdbApi.getMovie(id: movieId)
@@ -50,9 +57,11 @@ import CoreData
             
             DispatchQueue.main.sync {
                 self.movie = movie
-                self.entity = entity
                 self.isWatched = entity.watched
                 self.isInWatchlist = entity.inWatchlist
+                self.isFavorite = entity.favorite
+                
+                self.entity = entity
                 PersistenceController.shared.save()
             }
         } catch {
