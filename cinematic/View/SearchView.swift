@@ -24,12 +24,27 @@ struct SearchView: View {
                     .buttonStyle(.borderedProminent)
                 }
                 
-                List(vm.results) { movie in
-                    Text(movie.title)
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
+                        ForEach(vm.results) { movie in
+                            NavigationLink {
+                                if let id = movie.id {
+                                    MovieView(vm: MovieViewModel(movieId: id))
+                                }
+                            } label: {
+                                MoviePoster(movie: movie, withTitle: true)
+                                    .padding(.top)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
                 }
-                .scrollContentBackground(.hidden)
             }
-            .padding()
+            .onAppear {
+                vm.query = "Inception"
+            }
+            .padding(.horizontal)
+            .padding(.top)
             .background(Color.background.ignoresSafeArea())
             .navigationTitle("search.title")
         }

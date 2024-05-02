@@ -6,7 +6,6 @@ struct MovieView: View {
     private func content(movie: Movie) -> some View {
         VStack(spacing: 16) {
             MoviePoster(movie: movie, withTitle: false, glow: true)
-                .padding(.top)
             
             Text(movie.title)
                 .font(.largeTitle.bold())

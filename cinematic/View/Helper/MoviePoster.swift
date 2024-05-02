@@ -49,6 +49,8 @@ struct MoviePoster: View {
                 Text(movie.thumbnailTitle)
                     .font(.caption)
                     .padding(.top, 2)
+                    .lineLimit(2, reservesSpace: true)
+                    .multilineTextAlignment(.center)
             }
         }
     }
