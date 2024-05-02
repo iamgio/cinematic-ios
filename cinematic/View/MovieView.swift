@@ -12,8 +12,13 @@ struct MovieView: View {
                 .font(.largeTitle.bold())
             
             VStack {
-                Text(movie.year + " • " + movie.runtime)
-                Text(movie.genre)
+                if let year = movie.year, let runtime = movie.runtime {
+                    Text(year + " • " + runtime)
+                }
+                
+                if let genre = movie.genre {
+                    Text(genre)
+                }
             }
             .foregroundStyle(.secondary)
             
@@ -23,11 +28,15 @@ struct MovieView: View {
             }
             
             VStack(alignment: .leading) {
-                Text(movie.plot)
+                if let plot = movie.plot {
+                    Text(plot)
+                }
                 
-                Text("movie.director \(movie.director)")
-                    .foregroundStyle(.secondary)
-                    .padding(.vertical)
+                if let director = movie.director {
+                    Text("movie.director \(director)")
+                        .foregroundStyle(.secondary)
+                        .padding(.vertical)
+                }
             }
             .padding(.horizontal)
             

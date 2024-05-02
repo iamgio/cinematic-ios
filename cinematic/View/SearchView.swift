@@ -13,7 +13,9 @@ struct SearchView: View {
                         .cornerRadius(8)
                     
                     Button {
-                        
+                        Task {
+                            await vm.perform()
+                        }
                     } label: {
                         Text("search.perform")
                             .bold()

@@ -3,11 +3,11 @@ import Foundation
 struct Movie: ThumbnailMovie {
     var id: String?
     var title: String
-    var plot: String
-    var genre: String
-    var director: String
-    var runtime: String
-    var year: String
+    var plot: String?
+    var genre: String?
+    var director: String?
+    var runtime: String?
+    var year: String?
     var rating: Int?
     var image: String?
     
@@ -29,11 +29,11 @@ extension MovieEntity: ThumbnailMovie {
 struct DecodableMovie: Decodable {
     var imdbID: String
     var Title: String
-    var Plot: String
-    var Genre: String
-    var Director: String
-    var Runtime: String
-    var Year: String
+    var Plot: String?
+    var Genre: String?
+    var Director: String?
+    var Runtime: String?
+    var Year: String?
     var Metascore: String?
     var Poster: String?
     

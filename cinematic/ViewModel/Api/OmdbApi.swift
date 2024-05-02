@@ -12,4 +12,9 @@ struct OmdbApi {
         let movie: DecodableMovie = try await sendGetRequest(endpoint: "i=\(id)")
         return movie.toMovie()
     }
+    
+    static func searchMovies(query: String) async throws -> [Movie] {
+        let wrapper: MovieSearchWrapper = try await sendGetRequest(endpoint: "s=\(query)")
+        return wrapper.Search.map { $0.toMovie() }
+    }
 }
