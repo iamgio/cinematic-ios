@@ -1,6 +1,6 @@
 import Foundation
 
-struct Movie: ThumbnailMovie {
+struct Movie: ThumbnailMovie, Equatable {
     var id: String?
     var title: String
     var plot: String?
