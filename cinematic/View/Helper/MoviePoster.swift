@@ -13,7 +13,7 @@ struct MoviePoster: View {
         
         let placeholder = RoundedRectangle(cornerRadius: cornerRadius)
             .frame(width: MoviePoster.width, height: MoviePoster.height)
-            .foregroundStyle(.orange)
+            .foregroundStyle(.moviePlaceholder)
         
         // Async image builder
         let imageBuilder: (Image) -> some View = { image in
