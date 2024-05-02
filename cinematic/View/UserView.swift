@@ -59,6 +59,9 @@ struct UserView: View {
             
             MovieRowShowcase(title: "user.watched", movies: vm.watched)
                 .padding(.top, 32)
+            
+            MovieRowShowcase(title: "user.watchlist", movies: vm.watchlist)
+                .padding(.top, 32)
         }
         .padding()
     }

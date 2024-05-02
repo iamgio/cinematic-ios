@@ -34,6 +34,8 @@ import UIKit
     
     var watched: [MovieEntity] = []
     
+    var watchlist: [MovieEntity] = []
+    
     func load() {
         let entity = PersistenceController.shared.fetch(
             request: DataRequests.getUser(),
@@ -51,6 +53,11 @@ import UIKit
         
         self.watched = PersistenceController.shared.fetch(
             request: DataRequests.getWatched(),
+            orDefault: { [] }
+        ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
+        
+        self.watchlist = PersistenceController.shared.fetch(
+            request: DataRequests.getWatchlist(),
             orDefault: { [] }
         ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
         

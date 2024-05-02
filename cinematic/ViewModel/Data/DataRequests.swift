@@ -24,4 +24,11 @@ struct DataRequests {
         
         return request
     }
+    
+    static func getWatchlist() -> NSFetchRequest<MovieEntity> {
+        let request = MovieEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "inWatchlist == true")
+        
+        return request
+    }
 }
