@@ -42,11 +42,6 @@ struct UserView: View {
     
     private var regularContent: some View {
         VStack(alignment: .leading) {
-            header
-            
-            Divider()
-                .padding(.bottom, 24)
-            
             if !vm.bio.isEmpty {
                 Text(vm.bio)
                     .padding(.bottom, 12)
@@ -101,8 +96,17 @@ struct UserView: View {
                 if isEditing {
                     editContent
                 } else {
-                    ScrollView {
-                        regularContent
+                    VStack(spacing: 0) {
+                        header
+                            .padding()
+                            .padding(.bottom, 4)
+                            .background(Color.overlayPrimary.opacity(0.3))
+                        
+                        Divider()
+                        
+                        ScrollView {
+                            regularContent
+                        }
                     }
                 }
             }
