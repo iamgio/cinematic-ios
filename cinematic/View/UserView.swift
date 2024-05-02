@@ -13,11 +13,6 @@ struct UserView: View {
     
     private var header: some View {
         HStack {
-            Text(vm.name)
-                .font(.largeTitle.bold())
-            
-            Spacer()
-            
             Group {
                 if let picture = vm.picture {
                     Image(uiImage: picture)
@@ -26,58 +21,69 @@ struct UserView: View {
                     Circle()
                 }
             }
-            .frame(width: 40, height: 40)
+            .frame(width: 36, height: 36)
+            .padding(.trailing, 8)
+            
+            if isEditing {
+                TextField("user.name", text: $vm.name)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.trailing, 8)
+            } else {
+                Text(vm.name)
+                    .font(.largeTitle.bold())
+            }
+            
+            Spacer()
+            
+            EditButton()
         }
     }
     
     private var regularContent: some View {
-        Group {
+        VStack(alignment: .leading) {
             header
+            
+            Divider()
+                .padding(.bottom, 24)
             
             if !vm.bio.isEmpty {
                 Text(vm.bio)
+                    .padding(.bottom, 12)
             }
             
             if !vm.location.isEmpty {
                 Label(vm.location, systemImage: "mappin.and.ellipse")
                     .foregroundStyle(.secondary)
             }
-            
-            EditButton()
         }
         .padding()
     }
     
     private var editContent: some View {
-        List {
-            Section {
-                TextField("user.name", text: $vm.name)
-            } header: {
-                Text("user.name")
-            }
+        VStack {
+            header.padding(EdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 24))
             
-            Section {
-                TextEditor(text: $vm.bio)
-            } header: {
-                Text("user.bio")
-            }
-            
-            Section {
-                HStack {
-                    TextField("user.location", text: $vm.location)
-                    Button("user.autolocation", systemImage: "scope") {
-                        vm.location = "New York" // TODO get from GPS
-                    }
-                    .labelStyle(.iconOnly)
+            List {
+                Section {
+                    TextEditor(text: $vm.bio)
+                } header: {
+                    Text("user.bio")
                 }
-            } header: {
-                Text("user.location")
+                
+                Section {
+                    HStack {
+                        TextField("user.location", text: $vm.location)
+                        Button("user.autolocation", systemImage: "scope") {
+                            vm.location = "New York" // TODO get from GPS
+                        }
+                        .labelStyle(.iconOnly)
+                    }
+                } header: {
+                    Text("user.location")
+                }
             }
-            
-            EditButton()
+            .scrollContentBackground(.hidden)
         }
-        .listRowBackground(Color.overlayPrimary)
-        .scrollContentBackground(.hidden)
     }
     
     var body: some View {
@@ -88,9 +94,7 @@ struct UserView: View {
                 editContent
             } else {
                 ScrollView {
-                    VStack(alignment: .leading) {
-                        regularContent
-                    }
+                    regularContent
                 }
             }
         }
