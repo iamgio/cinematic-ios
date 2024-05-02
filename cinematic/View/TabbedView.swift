@@ -10,7 +10,7 @@ struct TabbedView: View {
                     Label("feed.title", systemImage: "house")
                 }
             
-            Text("search")
+            SearchView(vm: SearchViewModel())
                 .tabItem {
                     Label("search.title", systemImage: "magnifyingglass")
                 }

@@ -9,6 +9,7 @@ struct MovieView: View {
             
             Text(movie.title)
                 .font(.largeTitle.bold())
+                .multilineTextAlignment(.center)
             
             VStack {
                 if let year = movie.year, let runtime = movie.runtime {
