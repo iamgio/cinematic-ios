@@ -63,7 +63,13 @@ struct UserView: View {
             }
             
             Section {
-                TextField("user.location", text: $vm.location)
+                HStack {
+                    TextField("user.location", text: $vm.location)
+                    Button("user.autolocation", systemImage: "scope") {
+                        vm.location = "New York" // TODO get from GPS
+                    }
+                    .labelStyle(.iconOnly)
+                }
             } header: {
                 Text("user.location")
             }
