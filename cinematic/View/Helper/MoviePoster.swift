@@ -32,7 +32,7 @@ struct MoviePoster: View {
                         if glow {
                             ZStack {
                                 imageBuilder(image)
-                                    .blur(radius: 60)
+                                    .blur(radius: 70)
                                     .offset(y: -20)
                                 imageBuilder(image)
                             }
