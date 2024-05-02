@@ -15,19 +15,19 @@ struct MovieRowShowcase<Movie: ThumbnailMovie>: View {
                 Text("movies.empty")
                     .padding(.vertical, 1)
                     .foregroundStyle(.secondary)
-            } else {
-                ScrollView(.horizontal) {
-                    HStack(spacing: 16) {
-                        ForEach(movies) { movie in
-                            NavigationLink {
-                                if let id = movie.id {
-                                    MovieView(vm: MovieViewModel(movieId: id))
-                                }
-                            } label: {
-                                MoviePoster(movie: movie, withTitle: true)
+            }
+            
+            ScrollView(.horizontal) {
+                HStack(spacing: 16) {
+                    ForEach(movies) { movie in
+                        NavigationLink {
+                            if let id = movie.id {
+                                MovieView(vm: MovieViewModel(movieId: id))
                             }
-                            .buttonStyle(.plain)
+                        } label: {
+                            MoviePoster(movie: movie, withTitle: true)
                         }
+                        .buttonStyle(.plain)
                     }
                 }
             }
