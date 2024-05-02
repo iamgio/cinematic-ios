@@ -30,11 +30,13 @@ struct MovieRowShowcase<Movie: ThumbnailMovie>: View {
 }
 
 #Preview {
-    MovieRowShowcase(
-        title: "Section",
-        movies: PersistenceController.shared.fetch(
-            request: MovieEntity.fetchRequest(),
-            orDefault: { [] }
-        ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
-    )
+    NavigationStack {
+        MovieRowShowcase(
+            title: "Section",
+            movies: PersistenceController.shared.fetch(
+                request: MovieEntity.fetchRequest(),
+                orDefault: { [] }
+            ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
+        )
+    }
 }

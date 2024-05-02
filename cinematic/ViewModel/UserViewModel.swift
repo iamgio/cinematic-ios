@@ -32,12 +32,7 @@ import UIKit
         }
     }
     
-    var watched: [MovieEntity] {
-        return PersistenceController.shared.fetch(
-            request: DataRequests.getWatched(),
-            orDefault: { [] }
-        ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
-    }
+    var watched: [MovieEntity] = []
     
     func load() {
         let entity = PersistenceController.shared.fetch(
@@ -53,6 +48,12 @@ import UIKit
         self.bio = entity.bio ?? ""
         self.location = entity.location ?? ""
         self.picture = entity.picture.map { UIImage(data: $0) ?? UIImage() }
+        
+        self.watched = PersistenceController.shared.fetch(
+            request: DataRequests.getWatched(),
+            orDefault: { [] }
+        ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } }
+        
         self.entity = entity
         PersistenceController.shared.save()
     }

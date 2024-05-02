@@ -103,9 +103,9 @@ struct UserView: View {
                     }
                 }
             }
-        }
-        .onAppear {
-            vm.load()
+            .onAppear {
+                vm.load()
+            }
         }
     }
 }
