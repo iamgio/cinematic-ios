@@ -52,10 +52,10 @@ struct UserView: View {
                     .foregroundStyle(.secondary)
             }
             
-            MovieRowShowcase(title: "user.watched", movies: vm.watched)
+            MovieCollectionShowcase(title: "user.watched", movies: vm.watched, type: .row)
                 .padding(.top, 32)
             
-            MovieRowShowcase(title: "user.watchlist", movies: vm.watchlist)
+            MovieCollectionShowcase(title: "user.watchlist", movies: vm.watchlist, type: .row)
                 .padding(.top, 32)
         }
         .padding()

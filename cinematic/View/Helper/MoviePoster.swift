@@ -1,24 +1,25 @@
 import SwiftUI
 
 struct MoviePoster: View {
+    static let width = 100.0
+    static let height = 148.0
+    
     var movie: any ThumbnailMovie
     var withTitle: Bool
     var glow: Bool = false
     
     var body: some View {
-        let width = 100.0
-        let height = 148.0
         let cornerRadius = 8.0
         
         let placeholder = RoundedRectangle(cornerRadius: cornerRadius)
-            .frame(width: width, height: height)
+            .frame(width: MoviePoster.width, height: MoviePoster.height)
             .foregroundStyle(.orange)
         
         // Async image builder
         let imageBuilder: (Image) -> some View = { image in
             image
                 .resizable()
-                .frame(width: width, height: height)
+                .frame(width: MoviePoster.width, height: MoviePoster.height)
                 .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
         }
         

@@ -24,24 +24,7 @@ struct SearchView: View {
                     .buttonStyle(.borderedProminent)
                 }
                 
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-                        ForEach(vm.results) { movie in
-                            NavigationLink {
-                                if let id = movie.id {
-                                    MovieView(vm: MovieViewModel(movieId: id))
-                                }
-                            } label: {
-                                MoviePoster(movie: movie, withTitle: true)
-                                    .padding(.top)
-                            }
-                            .buttonStyle(.plain)
-                        }
-                    }
-                }
-            }
-            .onAppear {
-                vm.query = "Inception"
+                MovieCollectionShowcase(movies: vm.results, type: .grid)
             }
             .padding(.horizontal)
             .padding(.top)
