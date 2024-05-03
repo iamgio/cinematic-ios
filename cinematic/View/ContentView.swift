@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("biometrics") private var useBiometrics: Bool = false
+    @AppStorage(SettingsKeys.theme) private var theme: AppTheme = .system
+    @AppStorage(SettingsKeys.useBiometrics) private var useBiometrics: Bool = false
     
     private let auth = AuthViewModel()
     
@@ -22,6 +23,7 @@ struct ContentView: View {
                 auth.loginSuccess = true
             }
         }
+        .preferredColorScheme(theme.toSwiftUITheme())
     }
 }
 
