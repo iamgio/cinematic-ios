@@ -1,4 +1,5 @@
 import Foundation
+import SwiftLocation
 import UIKit
 
 @Observable class UserViewModel {
@@ -63,5 +64,27 @@ import UIKit
         
         self.entity = entity
         PersistenceController.shared.save()
+    }
+    
+    func requestLocationUpdate() async throws {
+        // TODO not working yet
+        
+        let location = Location()
+        
+        let status = try await location.requestPermission(.whenInUse)
+        
+        print("Status: \(status)")
+        
+        print("a")
+        
+        let userLocation = try await location.requestLocation(timeout: 2)
+        
+        print("b")
+        
+        print(userLocation)
+        
+        DispatchQueue.main.sync {
+            self.location = userLocation.description
+        }
     }
 }

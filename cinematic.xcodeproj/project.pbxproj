@@ -27,6 +27,7 @@
 		3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */; };
 		3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */; };
 		3FC0C4D02BE06393000A93F8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */; };
+		3FDF74DC2BE41946006A7982 /* SwiftLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 3FDF74DB2BE41946006A7982 /* SwiftLocation */; };
 		3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */; };
 		3FF1072F2BE2FCB000DA617B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072E2BE2FCB000DA617B /* UserView.swift */; };
 		3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF107302BE2FCCE00DA617B /* UserViewModel.swift */; };
@@ -60,6 +61,7 @@
 		3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistButton.swift; sourceTree = "<group>"; };
 		3FF1072E2BE2FCB000DA617B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		3FF107302BE2FCCE00DA617B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		3FF34CBC2BE41E7900C9A1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3FFAAB692BE3AA5000556611 /* MovieCollectionShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionShowcase.swift; sourceTree = "<group>"; };
 		3FFAAB6B2BE3B69A00556611 /* CustomEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditButton.swift; sourceTree = "<group>"; };
 		3FFAAB6D2BE3C0DE00556611 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDF74DC2BE41946006A7982 /* SwiftLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 		3FC0C4A52BE03FB5000A93F8 /* cinematic */ = {
 			isa = PBXGroup;
 			children = (
+				3FF34CBC2BE41E7900C9A1CD /* Info.plist */,
 				3FC0C4BF2BE05085000A93F8 /* Model */,
 				3FC0C4BB2BE048BD000A93F8 /* Resources */,
 				3FC0C4BA2BE048A7000A93F8 /* ViewModel */,
@@ -205,6 +209,9 @@
 			dependencies = (
 			);
 			name = cinematic;
+			packageProductDependencies = (
+				3FDF74DB2BE41946006A7982 /* SwiftLocation */,
+			);
 			productName = cinematic;
 			productReference = 3FC0C4A32BE03FB5000A93F8 /* cinematic.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 3FC0C49A2BE03FB5000A93F8;
+			packageReferences = (
+				3FDF74DA2BE41946006A7982 /* XCRemoteSwiftPackageReference "SwiftLocation" */,
+			);
 			productRefGroup = 3FC0C4A42BE03FB5000A93F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +429,14 @@
 				DEVELOPMENT_TEAM = B9VN324JCL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cinematic/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +466,14 @@
 				DEVELOPMENT_TEAM = B9VN324JCL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cinematic/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FDF74DA2BE41946006A7982 /* XCRemoteSwiftPackageReference "SwiftLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftLocation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FDF74DB2BE41946006A7982 /* SwiftLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FDF74DA2BE41946006A7982 /* XCRemoteSwiftPackageReference "SwiftLocation" */;
+			productName = SwiftLocation;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3FC0C4B12BE03FB9000A93F8 /* cinematic.xcdatamodeld */ = {

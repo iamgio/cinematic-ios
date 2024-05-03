@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "edit.active" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -111,10 +114,8 @@
         }
       }
     },
-    "search" : {
-
-    },
     "search.perform" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -125,6 +126,7 @@
       }
     },
     "search.query" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

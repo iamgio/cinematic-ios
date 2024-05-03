@@ -76,7 +76,14 @@ struct UserView: View {
                     HStack {
                         TextField("user.location", text: $vm.location)
                         Button("user.autolocation", systemImage: "scope") {
-                            vm.location = "New York" // TODO get from GPS
+                            Task {
+                                do {
+                                    try await vm.requestLocationUpdate()
+                                } catch {
+                                    // TODO plistNotConfigured
+                                    print(error)
+                                }
+                            }
                         }
                         .labelStyle(.iconOnly)
                     }
