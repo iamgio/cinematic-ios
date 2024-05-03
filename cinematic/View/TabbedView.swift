@@ -19,6 +19,11 @@ struct TabbedView: View {
                 .tabItem {
                     Label("user.title", systemImage: "person")
                 }
+            
+            SettingsView()
+                .tabItem {
+                    Label("settings.title", systemImage: "gear")
+                }
         }
     }
 }

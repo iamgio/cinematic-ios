@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("biometrics") private var useBiometrics: Bool = false
+    
     private let auth = AuthViewModel()
     
     var body: some View {
@@ -14,8 +16,11 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            // TODO depend on settings
-            auth.biometricsAuth()
+            if useBiometrics {
+                auth.biometricsAuth()
+            } else {
+                auth.loginSuccess = true
+            }
         }
     }
 }

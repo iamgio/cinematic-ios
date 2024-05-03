@@ -151,6 +151,37 @@
         }
       }
     },
+    "settings.biometrics" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biometrics login"
+          }
+        }
+      }
+    },
+    "settings.biometrics.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Authenticate with biometrics every time you open the app."
+          }
+        }
+      }
+    },
+    "settings.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
     "user.autolocation" : {
       "extractionState" : "manual",
       "localizations" : {
