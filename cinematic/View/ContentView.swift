@@ -8,7 +8,9 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if auth.loginSuccess == nil {
+            if !auth.userExists && !auth.registerSuccess {
+                RegisterView(vm: auth)
+            } else if auth.loginSuccess == nil {
                 Text("Logging in")
             } else if auth.loginSuccess == true {
                 TabbedView()
@@ -17,10 +19,12 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            if useBiometrics {
-                auth.biometricsAuth()
-            } else {
-                auth.loginSuccess = true
+            if auth.userExists {
+                if useBiometrics {
+                    auth.biometricsAuth()
+                } else {
+                    auth.loginSuccess = true
+                }
             }
         }
         .preferredColorScheme(theme.toSwiftUITheme())

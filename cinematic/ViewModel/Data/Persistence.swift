@@ -68,4 +68,12 @@ struct PersistenceController {
             print("Error saving: \(error)")
         }
     }
+    
+    func clearUsers() {
+        let users = try? PersistenceController.shared.container.viewContext.fetch(UserEntity.fetchRequest())
+        users?.forEach {
+            PersistenceController.shared.container.viewContext.delete($0)
+        }
+        PersistenceController.shared.save()
+    }
 }
