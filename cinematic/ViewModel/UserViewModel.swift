@@ -37,6 +37,12 @@ import UIKit
     
     var watchlist: [MovieEntity] = []
     
+    var showFavoriteWatchedOnly = false
+    
+    var filteredWatched: [MovieEntity] {
+        showFavoriteWatchedOnly ? watched.filter { $0.favorite } : watched
+    }
+    
     func load() {
         let entity = PersistenceController.shared.fetch(
             request: DataRequests.getUser(),

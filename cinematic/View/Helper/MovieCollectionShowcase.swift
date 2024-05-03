@@ -5,6 +5,9 @@ struct MovieCollectionShowcase<Movie: ThumbnailMovie>: View {
     var movies: [Movie]
     var type: DisplayType
     
+    var allowFavoriteFilter: Bool = false
+    var showFavoritesOnly: Binding<Bool> = .constant(false)
+    
     enum DisplayType {
         case row
         case grid
@@ -12,8 +15,22 @@ struct MovieCollectionShowcase<Movie: ThumbnailMovie>: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(title)
-                .font(.title.bold())
+            HStack {
+                Text(title)
+                    .font(.title.bold())
+                
+                Spacer()
+                
+                if allowFavoriteFilter {
+                    Button {
+                        withAnimation {
+                            showFavoritesOnly.wrappedValue.toggle()
+                        }
+                    } label: {
+                        Label("movies.favoritesonly", systemImage: showFavoritesOnly.wrappedValue ? "heart.fill" : "heart")
+                    }
+                }
+            }
             
             if movies.isEmpty {
                 Text("movies.empty")
@@ -50,16 +67,16 @@ struct MovieCollectionShowcase<Movie: ThumbnailMovie>: View {
         }
     }
 }
-    
-    #Preview {
-        NavigationStack {
-            MovieCollectionShowcase(
-                title: "Section",
-                movies: PersistenceController.shared.fetch(
-                    request: MovieEntity.fetchRequest(),
-                    orDefault: { [] }
-                ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } },
-                type: .row
-            )
-        }
+
+#Preview {
+    NavigationStack {
+        MovieCollectionShowcase(
+            title: "Section",
+            movies: PersistenceController.shared.fetch(
+                request: MovieEntity.fetchRequest(),
+                orDefault: { [] }
+            ) { $0.sorted { $0.title ?? "" < $1.title ?? "" } },
+            type: .row
+        )
     }
+}

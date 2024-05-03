@@ -52,8 +52,13 @@ struct UserView: View {
                     .foregroundStyle(.secondary)
             }
             
-            MovieCollectionShowcase(title: "user.watched", movies: vm.watched, type: .row)
-                .padding(.top, 32)
+            MovieCollectionShowcase(
+                title: "user.watched",
+                movies: vm.filteredWatched,
+                type: .row, allowFavoriteFilter: true,
+                showFavoritesOnly: $vm.showFavoriteWatchedOnly
+            )
+            .padding(.top, 32)
             
             MovieCollectionShowcase(title: "user.watchlist", movies: vm.watchlist, type: .row)
                 .padding(.top, 32)

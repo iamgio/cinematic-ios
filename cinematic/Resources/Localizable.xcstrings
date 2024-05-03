@@ -114,24 +114,13 @@
         }
       }
     },
-    "search.perform" : {
-      "extractionState" : "stale",
+    "movies.favoritesonly" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Go"
-          }
-        }
-      }
-    },
-    "search.query" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Query"
+            "value" : "Favorites only"
           }
         }
       }
