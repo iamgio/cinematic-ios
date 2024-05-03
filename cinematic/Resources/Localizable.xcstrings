@@ -45,6 +45,17 @@
     "Logging in" : {
 
     },
+    "modal.close" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
     "movie.director %@" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -1,6 +1,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct UserView: View {
     @Bindable var vm: UserViewModel
@@ -48,8 +49,12 @@ struct UserView: View {
             }
             
             if !vm.location.isEmpty {
-                Label(vm.location, systemImage: "mappin.and.ellipse")
-                    .foregroundStyle(.secondary)
+                Button {
+                    vm.showLocation = true
+                } label: {
+                    Label(vm.location, systemImage: "mappin.and.ellipse")
+                }
+                .foregroundStyle(.secondary)
             }
             
             MovieCollectionShowcase(
@@ -124,6 +129,9 @@ struct UserView: View {
             }
             .onAppear {
                 vm.load()
+            }
+            .sheet(isPresented: $vm.showLocation) {
+                UserLocationMapView(vm: vm)
             }
         }
     }

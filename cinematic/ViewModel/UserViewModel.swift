@@ -1,5 +1,6 @@
 import Foundation
 import SwiftLocation
+import CoreLocation
 import UIKit
 
 @Observable class UserViewModel {
@@ -21,6 +22,7 @@ import UIKit
     
     var location: String = "" {
         willSet {
+            locationCoordinate = nil
             entity?.location = newValue
             PersistenceController.shared.save()
         }
@@ -38,6 +40,10 @@ import UIKit
     var watchlist: [MovieEntity] = []
     
     var showFavoriteWatchedOnly = false
+    
+    var showLocation = false
+    
+    var locationCoordinate: CLLocationCoordinate2D? = nil
     
     var filteredWatched: [MovieEntity] {
         showFavoriteWatchedOnly ? watched.filter { $0.favorite } : watched
@@ -70,6 +76,13 @@ import UIKit
         
         self.entity = entity
         PersistenceController.shared.save()
+    }
+    
+    func fetchLocationCoordinate() {
+        GeoUtils().getCoordinate(address: location) { coordinate, error in
+            guard let coordinate = coordinate, error == nil else { return }
+            self.locationCoordinate = coordinate
+        }
     }
     
     func requestLocationUpdate() async throws {
