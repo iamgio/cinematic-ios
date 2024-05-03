@@ -26,6 +26,9 @@
         }
       }
     },
+    "Error" : {
+
+    },
     "feed" : {
 
     },
@@ -38,6 +41,9 @@
           }
         }
       }
+    },
+    "Logging in" : {
+
     },
     "movie.director %@" : {
       "extractionState" : "manual",
