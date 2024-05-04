@@ -326,6 +326,28 @@
         }
       }
     },
+    "trophy.search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
+    },
+    "trophy.search.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Searched for a movie"
+          }
+        }
+      }
+    },
     "trophy.watched" : {
       "extractionState" : "manual",
       "localizations" : {

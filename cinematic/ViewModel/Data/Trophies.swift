@@ -17,7 +17,9 @@ enum Trophies {
     
     static var watchlist: TrophyEntity { trophy(name: "watchlist") }
     
+    static var search: TrophyEntity { trophy(name: "search") }
+    
     static var all: [TrophyEntity] {
-        [registration, watched, favorite, watchlist]
+        [registration, watched, favorite, watchlist, search]
     }
 }

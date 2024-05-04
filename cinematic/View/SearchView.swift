@@ -6,6 +6,8 @@ struct SearchView: View {
     
     @Bindable var vm: SearchViewModel
     
+    @Environment(UserViewModel.self) var user
+    
     var body: some View {
         NavigationStack {
             MovieCollectionShowcase(movies: vm.results, type: .grid)
@@ -21,6 +23,7 @@ struct SearchView: View {
                         Task {
                             await vm.perform()
                         }
+                        user.addTrophy(Trophies.search)
                     }
                 }
         }
@@ -29,4 +32,5 @@ struct SearchView: View {
 
 #Preview {
     SearchView(vm: SearchViewModel())
+        .environment(UserViewModel())
 }
