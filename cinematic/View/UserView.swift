@@ -7,6 +7,7 @@ struct UserView: View {
     @Bindable var vm: UserViewModel
     
     @State private var editMode: EditMode = .inactive
+    @State private var locationManager = LocationManager()
     
     private var isEditing: Bool {
         editMode.isEditing == true
@@ -85,14 +86,14 @@ struct UserView: View {
                 Section {
                     HStack {
                         TextField("user.location", text: $vm.location)
+                        
+                        // User location fetch
                         Button("user.autolocation", systemImage: "scope") {
-                            Task {
-                                do {
-                                    try await vm.requestLocationUpdate()
-                                } catch {
-                                    // TODO plistNotConfigured
-                                    print(error)
-                                }
+                            locationManager.requestLocation()
+                        }
+                        .onChange(of: locationManager.location) {
+                            if let location = locationManager.location {
+                                vm.fetchLocationName(location: location)
                             }
                         }
                         .labelStyle(.iconOnly)

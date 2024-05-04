@@ -85,25 +85,11 @@ import UIKit
         }
     }
     
-    func requestLocationUpdate() async throws {
-        // TODO not working yet
-        
-        let location = Location()
-        
-        let status = try await location.requestPermission(.whenInUse)
-        
-        print("Status: \(status)")
-        
-        print("a")
-        
-        let userLocation = try await location.requestLocation(timeout: 2)
-        
-        print("b")
-        
-        print(userLocation)
-        
-        DispatchQueue.main.sync {
-            self.location = userLocation.description
+    func fetchLocationName(location: CLLocation) {
+        GeoUtils().getLocationName(location: location) { city, country, error in
+            if let city, let country {
+                self.location = "\(city), \(country)"
+            }
         }
     }
 }

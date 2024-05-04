@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F06041B2BE2F11000259BAE /* WatchUnwatchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */; };
 		3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B35BA2BE10246006D0727 /* DataRequests.swift */; };
+		3F3485D02BE651510086E3CE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3485CF2BE651510086E3CE /* LocationManager.swift */; };
 		3F501E392BE4FF7E00ED22C0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F501E382BE4FF7E00ED22C0 /* AuthViewModel.swift */; };
 		3F501E3B2BE5044200ED22C0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F501E3A2BE5044200ED22C0 /* SettingsView.swift */; };
 		3F501E3D2BE506EF00ED22C0 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F501E3C2BE506EF00ED22C0 /* AppTheme.swift */; };
@@ -35,7 +36,6 @@
 		3FC0C4CC2BE05FF0000A93F8 /* StarStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CB2BE05FF0000A93F8 /* StarStrip.swift */; };
 		3FC0C4CE2BE062BC000A93F8 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CD2BE062BC000A93F8 /* MoviePoster.swift */; };
 		3FC0C4D02BE06393000A93F8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4CF2BE06393000A93F8 /* Localizable.xcstrings */; };
-		3FDF74DC2BE41946006A7982 /* SwiftLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 3FDF74DB2BE41946006A7982 /* SwiftLocation */; };
 		3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072C2BE2F5E900DA617B /* WatchlistButton.swift */; };
 		3FF1072F2BE2FCB000DA617B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1072E2BE2FCB000DA617B /* UserView.swift */; };
 		3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF107302BE2FCCE00DA617B /* UserViewModel.swift */; };
@@ -47,6 +47,7 @@
 /* Begin PBXFileReference section */
 		3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUnwatchButton.swift; sourceTree = "<group>"; };
 		3F2B35BA2BE10246006D0727 /* DataRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequests.swift; sourceTree = "<group>"; };
+		3F3485CF2BE651510086E3CE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3F501E382BE4FF7E00ED22C0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		3F501E3A2BE5044200ED22C0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3F501E3C2BE506EF00ED22C0 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDF74DC2BE41946006A7982 /* SwiftLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +170,7 @@
 				3F501E382BE4FF7E00ED22C0 /* AuthViewModel.swift */,
 				3F501E3E2BE509D900ED22C0 /* SettingsKeys.swift */,
 				3F6B420D2BE5423500E29B3E /* GeoUtils.swift */,
+				3F3485CF2BE651510086E3CE /* LocationManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,7 +235,6 @@
 			);
 			name = cinematic;
 			packageProductDependencies = (
-				3FDF74DB2BE41946006A7982 /* SwiftLocation */,
 			);
 			productName = cinematic;
 			productReference = 3FC0C4A32BE03FB5000A93F8 /* cinematic.app */;
@@ -265,7 +265,6 @@
 			);
 			mainGroup = 3FC0C49A2BE03FB5000A93F8;
 			packageReferences = (
-				3FDF74DA2BE41946006A7982 /* XCRemoteSwiftPackageReference "SwiftLocation" */,
 			);
 			productRefGroup = 3FC0C4A42BE03FB5000A93F8 /* Products */;
 			projectDirPath = "";
@@ -298,6 +297,7 @@
 				3FC0C4B02BE03FB9000A93F8 /* Persistence.swift in Sources */,
 				3FFAAB6E2BE3C0DE00556611 /* FavoriteButton.swift in Sources */,
 				3F501E3D2BE506EF00ED22C0 /* AppTheme.swift in Sources */,
+				3F3485D02BE651510086E3CE /* LocationManager.swift in Sources */,
 				3F6B420E2BE5423500E29B3E /* GeoUtils.swift in Sources */,
 				3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */,
 				3F780FC42BE3E52F00CD748D /* MovieSearchWrapper.swift in Sources */,
@@ -465,8 +465,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
@@ -503,8 +501,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
@@ -548,25 +544,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3FDF74DA2BE41946006A7982 /* XCRemoteSwiftPackageReference "SwiftLocation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftLocation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3FDF74DB2BE41946006A7982 /* SwiftLocation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3FDF74DA2BE41946006A7982 /* XCRemoteSwiftPackageReference "SwiftLocation" */;
-			productName = SwiftLocation;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3FC0C4B12BE03FB9000A93F8 /* cinematic.xcdatamodeld */ = {
