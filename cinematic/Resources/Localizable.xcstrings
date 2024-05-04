@@ -260,6 +260,28 @@
         }
       }
     },
+    "trophy.favorite" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorite"
+          }
+        }
+      }
+    },
+    "trophy.favorite.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Added a movie to your favorites"
+          }
+        }
+      }
+    },
     "trophy.registration" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -278,6 +300,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Completed registration"
+          }
+        }
+      }
+    },
+    "trophy.watched" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watched"
+          }
+        }
+      }
+    },
+    "trophy.watched.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watched a movie"
+          }
+        }
+      }
+    },
+    "trophy.watchlist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watchlist"
+          }
+        }
+      }
+    },
+    "trophy.watchlist.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Added a movie to your watchlist"
           }
         }
       }

@@ -4,6 +4,7 @@ import SwiftUI
 
 struct TabbedView: View {
     var body: some View {
+        let userVm = UserViewModel()
         TabView {
             Text("feed")
                 .tabItem {
@@ -15,7 +16,7 @@ struct TabbedView: View {
                     Label("search.title", systemImage: "magnifyingglass")
                 }
             
-            UserView(vm: UserViewModel())
+            UserView(vm: userVm)
                 .tabItem {
                     Label("user.title", systemImage: "person")
                 }
@@ -25,6 +26,7 @@ struct TabbedView: View {
                     Label("settings.title", systemImage: "gear")
                 }
         }
+        .environment(userVm)
     }
 }
 

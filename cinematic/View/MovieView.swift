@@ -3,6 +3,8 @@ import SwiftUI
 struct MovieView: View {
     @Bindable var vm: MovieViewModel
     
+    @Environment(UserViewModel.self) var user
+    
     private func content(movie: Movie) -> some View {
         VStack(spacing: 16) {
             MoviePoster(movie: movie, withTitle: false, glow: true)
@@ -42,14 +44,29 @@ struct MovieView: View {
             
             VStack(spacing: 24) {
                 WatchUnwatchButton(isWatched: $vm.isWatched)
+                    .onChange(of: vm.isWatched) {
+                        if vm.isWatched {
+                            user.addTrophy(Trophies.watched)
+                        }
+                    }
                 
                 if vm.isWatched {
                     FavoriteButton(isFavorite: $vm.isFavorite)
                         .padding(.bottom)
+                        .onChange(of: vm.isFavorite) {
+                            if vm.isFavorite {
+                                user.addTrophy(Trophies.favorite)
+                            }
+                        }
                 }
                 
                 WatchlistButton(isInWatchlist: $vm.isInWatchlist)
                     .foregroundStyle(vm.isWatched ? .secondary : .primary)
+                    .onChange(of: vm.isInWatchlist) {
+                        if vm.isInWatchlist {
+                            user.addTrophy(Trophies.watchlist)
+                        }
+                    }
             }
         }
     }
@@ -74,4 +91,5 @@ struct MovieView: View {
 
 #Preview {
     MovieView(vm: MovieViewModel(movieId: "tt0816692"))
+        .environment(UserViewModel())
 }

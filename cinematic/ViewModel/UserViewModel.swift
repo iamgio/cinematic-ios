@@ -51,7 +51,7 @@ import SwiftUI
     
     var trophies: [TrophyEntity] {
         guard let trophies = entity?.trophies as? Set<TrophyEntity> else { return [] }
-        return trophies.sorted { $0.title < $1.title }
+        return trophies.sorted { ($0.unlockedDate ?? Date()) > ($1.unlockedDate ?? Date()) }
     }
     
     func load() {
@@ -109,6 +109,15 @@ import SwiftUI
             DispatchQueue.main.sync {
                 self.picture = UIImage(data: data)
             }
+        }
+    }
+    
+    func addTrophy(_ trophy: TrophyEntity) {
+        // Don't add if the user already owns the trophy.
+        let any = (entity?.trophies as? Set<TrophyEntity>)?.first { $0.name == trophy.name }
+        
+        if any == nil {
+            entity?.addToTrophies(trophy)
         }
     }
 }
