@@ -3,6 +3,8 @@ import PhotosUI
 import CoreLocation
 
 struct UserView: View {
+    private static let sectionSpacing = 32.0
+    
     @Bindable var vm: UserViewModel
     
     @State private var editMode: EditMode = .inactive
@@ -79,10 +81,14 @@ struct UserView: View {
                 type: .row, allowFavoriteFilter: true,
                 showFavoritesOnly: $vm.showFavoriteWatchedOnly
             )
-            .padding(.top, 32)
+            .padding(.top, UserView.sectionSpacing)
             
             MovieCollectionShowcase(title: "user.watchlist", movies: vm.watchlist, type: .row)
-                .padding(.top, 32)
+                .padding(.top, UserView.sectionSpacing)
+            
+            Text("user.trophies")
+                .font(.title.bold())
+                .padding(.top, UserView.sectionSpacing)
             
             ForEach(vm.trophies) {
                 TrophyView(trophy: $0)

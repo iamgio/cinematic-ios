@@ -260,6 +260,28 @@
         }
       }
     },
+    "trophy.registration" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New user"
+          }
+        }
+      }
+    },
+    "trophy.registration.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completed registration"
+          }
+        }
+      }
+    },
     "user.autolocation" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -317,6 +339,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profile"
+          }
+        }
+      }
+    },
+    "user.trophies" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trophies"
           }
         }
       }

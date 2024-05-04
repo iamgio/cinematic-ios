@@ -8,7 +8,6 @@ struct TrophyView: View {
             Image(systemName: "trophy.fill")
                 .font(.largeTitle)
                 .padding(.horizontal)
-                .blendMode(.overlay)
                 .shadow(color: .accent, radius: 16)
             
             VStack(alignment: .leading, spacing: 6) {
