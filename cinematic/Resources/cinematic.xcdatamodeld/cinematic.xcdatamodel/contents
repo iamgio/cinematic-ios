@@ -8,10 +8,14 @@
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="watched" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
+    <entity name="TrophyEntity" representedClassName="TrophyEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
         <attribute name="bio" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="picture" optional="YES" attributeType="Binary"/>
+        <relationship name="trophies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrophyEntity"/>
     </entity>
 </model>

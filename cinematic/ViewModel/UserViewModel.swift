@@ -1,6 +1,5 @@
 import Foundation
 import PhotosUI
-import SwiftLocation
 import CoreLocation
 import SwiftUI
 
