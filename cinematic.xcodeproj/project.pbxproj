@@ -24,6 +24,7 @@
 		3F780FC42BE3E52F00CD748D /* MovieSearchWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F780FC32BE3E52F00CD748D /* MovieSearchWrapper.swift */; };
 		3FAAD3E02BE6856300C77E6C /* TrophyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3DF2BE6856300C77E6C /* TrophyView.swift */; };
 		3FAAD3E22BE6860600C77E6C /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3E12BE6860600C77E6C /* Trophy.swift */; };
+		3FAAD3E42BE68C7300C77E6C /* TrophyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3E32BE68C7300C77E6C /* TrophyType.swift */; };
 		3FC0C4A72BE03FB5000A93F8 /* CinematicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */; };
 		3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */; };
 		3FC0C4AB2BE03FB9000A93F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4AA2BE03FB9000A93F8 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		3F780FC32BE3E52F00CD748D /* MovieSearchWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchWrapper.swift; sourceTree = "<group>"; };
 		3FAAD3DF2BE6856300C77E6C /* TrophyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyView.swift; sourceTree = "<group>"; };
 		3FAAD3E12BE6860600C77E6C /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
+		3FAAD3E32BE68C7300C77E6C /* TrophyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyType.swift; sourceTree = "<group>"; };
 		3FC0C4A32BE03FB5000A93F8 /* cinematic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinematic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinematicApp.swift; sourceTree = "<group>"; };
 		3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				3FC0C4AF2BE03FB9000A93F8 /* Persistence.swift */,
 				3F2B35BA2BE10246006D0727 /* DataRequests.swift */,
+				3FAAD3E32BE68C7300C77E6C /* TrophyType.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				3FAAD3E22BE6860600C77E6C /* Trophy.swift in Sources */,
 				3F780FC02BE3E11800CD748D /* SearchView.swift in Sources */,
 				3FF107312BE2FCCE00DA617B /* UserViewModel.swift in Sources */,
+				3FAAD3E42BE68C7300C77E6C /* TrophyType.swift in Sources */,
 				3FFAAB6C2BE3B69A00556611 /* CustomEditButton.swift in Sources */,
 				3F501E3B2BE5044200ED22C0 /* SettingsView.swift in Sources */,
 				3F6B420C2BE52AE400E29B3E /* RegisterView.swift in Sources */,

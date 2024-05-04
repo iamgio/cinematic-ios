@@ -40,6 +40,8 @@ import LocalAuthentication
             let user = UserEntity(context: PersistenceController.shared.context)
             user.name = registerUsername
             
+            user.addToTrophies(Trophies.registration)
+            
             PersistenceController.shared.save()
             registerSuccess = true
             loginSuccess = true

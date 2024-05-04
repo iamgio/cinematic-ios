@@ -83,6 +83,10 @@ struct UserView: View {
             
             MovieCollectionShowcase(title: "user.watchlist", movies: vm.watchlist, type: .row)
                 .padding(.top, 32)
+            
+            ForEach(vm.trophies) {
+                TrophyView(trophy: $0)
+            }
         }
         .padding()
     }

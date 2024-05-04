@@ -49,6 +49,11 @@ import SwiftUI
         showFavoriteWatchedOnly ? watched.filter { $0.favorite } : watched
     }
     
+    var trophies: [TrophyEntity] {
+        guard let trophies = entity?.trophies as? Set<TrophyEntity> else { return [] }
+        return trophies.sorted { $0.title < $1.title }
+    }
+    
     func load() {
         let entity = PersistenceController.shared.fetch(
             request: DataRequests.getUser(),
