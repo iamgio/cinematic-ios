@@ -282,6 +282,28 @@
         }
       }
     },
+    "trophy.edit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "trophy.edit.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edited your profile"
+          }
+        }
+      }
+    },
     "trophy.favorite" : {
       "extractionState" : "manual",
       "localizations" : {
