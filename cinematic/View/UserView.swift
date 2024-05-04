@@ -91,7 +91,7 @@ struct UserView: View {
                 .padding(.top, UserView.sectionSpacing)
             
             ForEach(vm.trophies) {
-                TrophyView(trophy: $0)
+                TrophyView(trophy: $0, owned: true)
             }
         }
         .padding()

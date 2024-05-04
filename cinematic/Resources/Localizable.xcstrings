@@ -260,6 +260,28 @@
         }
       }
     },
+    "trophies.fulltitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Available trophies"
+          }
+        }
+      }
+    },
+    "trophies.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trophies"
+          }
+        }
+      }
+    },
     "trophy.favorite" : {
       "extractionState" : "manual",
       "localizations" : {

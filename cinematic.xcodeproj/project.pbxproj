@@ -25,6 +25,7 @@
 		3FAAD3E02BE6856300C77E6C /* TrophyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3DF2BE6856300C77E6C /* TrophyView.swift */; };
 		3FAAD3E22BE6860600C77E6C /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3E12BE6860600C77E6C /* Trophy.swift */; };
 		3FAAD3E42BE68C7300C77E6C /* Trophies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3E32BE68C7300C77E6C /* Trophies.swift */; };
+		3FAAD3E62BE6977C00C77E6C /* TrophiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAD3E52BE6977C00C77E6C /* TrophiesView.swift */; };
 		3FC0C4A72BE03FB5000A93F8 /* CinematicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */; };
 		3FC0C4A92BE03FB5000A93F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */; };
 		3FC0C4AB2BE03FB9000A93F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0C4AA2BE03FB9000A93F8 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		3FAAD3DF2BE6856300C77E6C /* TrophyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyView.swift; sourceTree = "<group>"; };
 		3FAAD3E12BE6860600C77E6C /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
 		3FAAD3E32BE68C7300C77E6C /* Trophies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophies.swift; sourceTree = "<group>"; };
+		3FAAD3E52BE6977C00C77E6C /* TrophiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophiesView.swift; sourceTree = "<group>"; };
 		3FC0C4A32BE03FB5000A93F8 /* cinematic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinematic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC0C4A62BE03FB5000A93F8 /* CinematicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinematicApp.swift; sourceTree = "<group>"; };
 		3FC0C4A82BE03FB5000A93F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				3F501E3A2BE5044200ED22C0 /* SettingsView.swift */,
 				3F6B420B2BE52AE400E29B3E /* RegisterView.swift */,
 				3F6B42112BE5473C00E29B3E /* UserLocationMapView.swift */,
+				3FAAD3E52BE6977C00C77E6C /* TrophiesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				3F780FC42BE3E52F00CD748D /* MovieSearchWrapper.swift in Sources */,
 				3F6B42102BE5432800E29B3E /* MapView.swift in Sources */,
 				3FAAD3E02BE6856300C77E6C /* TrophyView.swift in Sources */,
+				3FAAD3E62BE6977C00C77E6C /* TrophiesView.swift in Sources */,
 				3FC0C4C32BE05319000A93F8 /* OmdbApi.swift in Sources */,
 				3FF1072D2BE2F5E900DA617B /* WatchlistButton.swift in Sources */,
 				3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */,

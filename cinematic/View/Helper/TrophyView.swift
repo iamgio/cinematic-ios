@@ -2,13 +2,14 @@ import SwiftUI
 
 struct TrophyView: View {
     var trophy: Trophy
+    var owned: Bool
     
     var body: some View {
         HStack {
             Image(systemName: "trophy.fill")
                 .font(.largeTitle)
                 .padding(.horizontal)
-                .shadow(color: .accent, radius: 16)
+                .shadow(color: owned ? .accent : .clear, radius: 16)
             
             VStack(alignment: .leading, spacing: 6) {
                 Text(LocalizedStringKey("trophy." + trophy.title))
@@ -27,5 +28,5 @@ struct TrophyView: View {
 }
 
 #Preview {
-    TrophyView(trophy: SimpleTrophy(title: "mock"))
+    TrophyView(trophy: SimpleTrophy(title: "mock"), owned: true)
 }
