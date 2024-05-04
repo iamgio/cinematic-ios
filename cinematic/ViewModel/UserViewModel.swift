@@ -1,7 +1,8 @@
 import Foundation
+import PhotosUI
 import SwiftLocation
 import CoreLocation
-import UIKit
+import SwiftUI
 
 @Observable class UserViewModel {
     private var entity: UserEntity? = nil
@@ -89,6 +90,20 @@ import UIKit
         GeoUtils().getLocationName(location: location) { city, country, error in
             if let city, let country {
                 self.location = "\(city), \(country)"
+            }
+        }
+    }
+    
+    func updatePicture(photo: PhotosPickerItem?) async throws {
+        guard let photo else {
+            self.picture = nil
+            return
+        }
+        
+        let data = try await photo.loadTransferable(type: Data.self)
+        if let data {
+            DispatchQueue.main.sync {
+                self.picture = UIImage(data: data)
             }
         }
     }

@@ -1,6 +1,5 @@
-//
-
 import SwiftUI
+import PhotosUI
 import CoreLocation
 
 struct UserView: View {
@@ -8,6 +7,7 @@ struct UserView: View {
     
     @State private var editMode: EditMode = .inactive
     @State private var locationManager = LocationManager()
+    @State private var selectedPhoto: PhotosPickerItem?
     
     private var isEditing: Bool {
         editMode.isEditing == true
@@ -15,9 +15,10 @@ struct UserView: View {
     
     private var header: some View {
         HStack {
-            Group {
+            let picture = Group {
                 if let picture = vm.picture {
                     Image(uiImage: picture)
+                        .resizable()
                         .clipShape(Circle())
                 } else {
                     Circle()
@@ -25,6 +26,20 @@ struct UserView: View {
             }
             .frame(width: 36, height: 36)
             .padding(.trailing, 8)
+            
+            if isEditing {
+                // Photo selection
+                PhotosPicker(selection: $selectedPhoto, matching: .images) {
+                    picture
+                }
+                .onChange(of: selectedPhoto) {
+                    Task {
+                        try await vm.updatePicture(photo: selectedPhoto)
+                    }
+                }
+            } else if vm.picture != nil {
+                picture
+            }
             
             if isEditing {
                 TextField("user.name", text: $vm.name)
