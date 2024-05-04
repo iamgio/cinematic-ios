@@ -112,11 +112,13 @@ import SwiftUI
         }
     }
     
+    func hasTrophy(_ trophy: TrophyEntity) -> Bool {
+        (entity?.trophies as? Set<TrophyEntity>)?.contains { $0.name == trophy.name } == true
+    }
+    
     func addTrophy(_ trophy: TrophyEntity) {
         // Don't add if the user already owns the trophy.
-        let contains = (entity?.trophies as? Set<TrophyEntity>)?.contains { $0.name == trophy.name }
-        
-        if contains == false {
+        if !self.hasTrophy(trophy) {
             entity?.addToTrophies(trophy)
         }
     }

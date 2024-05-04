@@ -8,7 +8,7 @@ struct TrophiesView: View {
         
         NavigationStack {
             List(Trophies.all) { trophy in
-                TrophyView(trophy: trophy, owned: userTrophies.contains { $0.title == trophy.title })
+                TrophyView(trophy: trophy, owned: vm.hasTrophy(trophy))
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
             }
