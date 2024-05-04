@@ -114,9 +114,9 @@ import SwiftUI
     
     func addTrophy(_ trophy: TrophyEntity) {
         // Don't add if the user already owns the trophy.
-        let any = (entity?.trophies as? Set<TrophyEntity>)?.first { $0.name == trophy.name }
+        let contains = (entity?.trophies as? Set<TrophyEntity>)?.contains { $0.name == trophy.name }
         
-        if any == nil {
+        if contains == false {
             entity?.addToTrophies(trophy)
         }
     }

@@ -4,9 +4,11 @@ struct TrophiesView: View {
     @Environment(UserViewModel.self) var vm
     
     var body: some View {
+        let userTrophies = vm.trophies
+        
         NavigationStack {
-            List(vm.trophies) {
-                TrophyView(trophy: $0, owned: true)
+            List(Trophies.all) { trophy in
+                TrophyView(trophy: trophy, owned: userTrophies.contains { $0.title == trophy.title })
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
             }

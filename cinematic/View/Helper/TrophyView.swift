@@ -6,7 +6,7 @@ struct TrophyView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "trophy.fill")
+            Image(systemName: owned ? "trophy.fill" : "trophy")
                 .font(.largeTitle)
                 .padding(.horizontal)
                 .shadow(color: owned ? .accent : .clear, radius: 16)
