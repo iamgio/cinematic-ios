@@ -8,6 +8,7 @@ struct TrophyView: View {
         HStack {
             Image(systemName: owned ? "trophy.fill" : "trophy")
                 .font(.largeTitle)
+                .foregroundStyle(.accent)
                 .padding(.horizontal)
                 .shadow(color: owned ? .accent : .clear, radius: 16)
             

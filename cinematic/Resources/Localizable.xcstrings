@@ -29,10 +29,8 @@
     "Error" : {
 
     },
-    "feed" : {
-
-    },
     "feed.title" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -41,9 +39,6 @@
           }
         }
       }
-    },
-    "Hello, World!" : {
-
     },
     "Logging in" : {
 
