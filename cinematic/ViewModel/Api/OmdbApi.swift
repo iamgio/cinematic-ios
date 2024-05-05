@@ -15,6 +15,6 @@ struct OmdbApi {
     
     static func searchMovies(query: String) async throws -> [Movie] {
         let wrapper: MovieSearchWrapper = try await sendGetRequest(endpoint: "s=\(query)")
-        return wrapper.Search.map { $0.toMovie() }
+        return wrapper.Search?.map { $0.toMovie() } ?? []
     }
 }
