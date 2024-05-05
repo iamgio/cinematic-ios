@@ -56,7 +56,9 @@ struct MovieCollectionShowcase<Movie: ThumbnailMovie>: View {
                     HStack(spacing: 16) {
                         content
                     }
+                    .padding(.horizontal, 16)
                 }
+                .padding(.horizontal, -16) // Removes unscrollable padding
             case .grid:
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: MoviePoster.width))]) {
