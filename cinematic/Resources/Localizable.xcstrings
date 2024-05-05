@@ -4,6 +4,9 @@
     "" : {
 
     },
+    " " : {
+
+    },
     "edit.active" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -28,17 +31,6 @@
     },
     "Error" : {
 
-    },
-    "feed.title" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Feed"
-          }
-        }
-      }
     },
     "Logging in" : {
 
@@ -361,6 +353,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Searched for a movie"
+          }
+        }
+      }
+    },
+    "trophy.unlocked" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlocked"
           }
         }
       }

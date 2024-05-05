@@ -5,8 +5,9 @@ import SwiftUI
 struct TabbedView: View {
     @State private var selection = 2
     
+    @Environment(UserViewModel.self) private var user
+    
     var body: some View {
-        let userVm = UserViewModel()
         TabView(selection: $selection) {
             TrophiesView()
                 .tag(0)
@@ -20,7 +21,7 @@ struct TabbedView: View {
                     Label("search.title", systemImage: "magnifyingglass")
                 }
             
-            UserView(vm: userVm)
+            UserView(vm: user)
                 .tag(2)
                 .tabItem {
                     Label("user.title", systemImage: "person")
@@ -32,10 +33,10 @@ struct TabbedView: View {
                     Label("settings.title", systemImage: "gear")
                 }
         }
-        .environment(userVm)
     }
 }
 
 #Preview {
     TabbedView()
+        .environment(UserViewModel())
 }

@@ -54,6 +54,9 @@ import SwiftUI
         return trophies.sorted { ($0.unlockedDate ?? Date()) > ($1.unlockedDate ?? Date()) }
     }
     
+    // Latest unlocked trophy to display as a notification
+    var newTrophy: TrophyEntity? = nil
+    
     func load() {
         let entity = PersistenceController.shared.fetch(
             request: DataRequests.getUser(),
@@ -120,6 +123,7 @@ import SwiftUI
         // Don't add if the user already owns the trophy.
         if !self.hasTrophy(trophy) {
             entity?.addToTrophies(trophy)
+            newTrophy = trophy
         }
     }
 }

@@ -5,6 +5,7 @@ struct ContentView: View {
     @AppStorage(SettingsKeys.useBiometrics) private var useBiometrics: Bool = false
     
     private let auth = AuthViewModel()
+    private let user = UserViewModel()
     
     var body: some View {
         Group {
@@ -28,6 +29,25 @@ struct ContentView: View {
             }
         }
         .preferredColorScheme(theme.toSwiftUITheme())
+        .environment(user)
+        .overlay(alignment: .top) {
+            // Shows a notification if a new trophy is unlocked
+            if let trophy = user.newTrophy {
+                NewTrophyNotification(trophy: trophy)
+                    .padding(.top)
+                    .transition(.move(edge: .top).combined(with: .opacity).animation(.easeInOut))
+            }
+        }
+        .onChange(of: user.newTrophy) {
+            // Hides the new trophy notification after some time
+            if user.newTrophy != nil {
+                Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+                    withAnimation {
+                        user.newTrophy = nil
+                    }
+                }
+            }
+        }
     }
 }
 
