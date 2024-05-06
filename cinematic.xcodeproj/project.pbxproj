@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015A1BA82BE8C55A00611DEB /* BiometricsLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A1BA72BE8C55A00611DEB /* BiometricsLoginView.swift */; };
 		3F06041B2BE2F11000259BAE /* WatchUnwatchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */; };
 		3F2B35BB2BE10246006D0727 /* DataRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B35BA2BE10246006D0727 /* DataRequests.swift */; };
 		3F3485D02BE651510086E3CE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3485CF2BE651510086E3CE /* LocationManager.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		015A1BA72BE8C55A00611DEB /* BiometricsLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsLoginView.swift; sourceTree = "<group>"; };
 		3F06041A2BE2F11000259BAE /* WatchUnwatchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUnwatchButton.swift; sourceTree = "<group>"; };
 		3F2B35BA2BE10246006D0727 /* DataRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequests.swift; sourceTree = "<group>"; };
 		3F3485CF2BE651510086E3CE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				3F6B420B2BE52AE400E29B3E /* RegisterView.swift */,
 				3F6B42112BE5473C00E29B3E /* UserLocationMapView.swift */,
 				3FAAD3E52BE6977C00C77E6C /* TrophiesView.swift */,
+				015A1BA72BE8C55A00611DEB /* BiometricsLoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F780FC22BE3E16700CD748D /* SearchViewModel.swift in Sources */,
+				015A1BA82BE8C55A00611DEB /* BiometricsLoginView.swift in Sources */,
 				3FC0C4B02BE03FB9000A93F8 /* Persistence.swift in Sources */,
 				3FFAAB6E2BE3C0DE00556611 /* FavoriteButton.swift in Sources */,
 				3F501E3D2BE506EF00ED22C0 /* AppTheme.swift in Sources */,

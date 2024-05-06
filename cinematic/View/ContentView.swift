@@ -11,12 +11,10 @@ struct ContentView: View {
         Group {
             if !auth.userExists && !auth.registerSuccess {
                 RegisterView(vm: auth)
-            } else if auth.loginSuccess == nil {
-                Text("Logging in")
             } else if auth.loginSuccess == true {
                 TabbedView()
             } else {
-                Text("Error")
+                BiometricsLoginView(withError: auth.loginSuccess == false)
             }
         }
         .onAppear {

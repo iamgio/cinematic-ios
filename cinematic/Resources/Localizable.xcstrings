@@ -29,11 +29,45 @@
         }
       }
     },
-    "Error" : {
-
+    "login.errorsubtitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No match or unavailable sensors"
+          }
+        }
+      }
     },
-    "Logging in" : {
-
+    "login.errortitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not log in"
+          }
+        }
+      }
+    },
+    "login.subtitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logging you in via biometrics"
+          }
+        }
+      }
+    },
+    "login.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome back"
+          }
+        }
+      }
     },
     "modal.close" : {
       "extractionState" : "manual",
@@ -171,6 +205,9 @@
           }
         }
       }
+    },
+    "Section" : {
+
     },
     "settings.biometrics" : {
       "localizations" : {
