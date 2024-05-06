@@ -28,6 +28,7 @@ struct ContentView: View {
         }
         .preferredColorScheme(theme.toSwiftUITheme())
         .environment(user)
+        .environment(auth)
         .overlay(alignment: .top) {
             // Shows a notification if a new trophy is unlocked
             if let trophy = user.newTrophy {

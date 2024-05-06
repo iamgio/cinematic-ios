@@ -4,6 +4,8 @@ struct BiometricsLoginView: View {
     
     var withError: Bool
     
+    @Environment(AuthViewModel.self) private var auth
+    
     var body: some View {
         ZStack {
             Color.background.ignoresSafeArea()
@@ -23,6 +25,13 @@ struct BiometricsLoginView: View {
                 
                 if !withError {
                     Spacer()
+                } else {
+                    Button("login.retry") {
+                        auth.loginSuccess = nil
+                        auth.biometricsAuth()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding()
                 }
             }
             .padding(.vertical, 32)
@@ -35,4 +44,5 @@ struct BiometricsLoginView: View {
         BiometricsLoginView(withError: false)
         BiometricsLoginView(withError: true)
     }
+    .environment(AuthViewModel())
 }
