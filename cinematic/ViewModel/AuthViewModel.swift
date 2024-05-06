@@ -25,7 +25,7 @@ import LocalAuthentication
                 self.loginSuccess = success
             }
         } else {
-            print("No biometrics: \(error)")
+            print("No biometrics: \(error!)")
             self.loginSuccess = false
         }
     }
