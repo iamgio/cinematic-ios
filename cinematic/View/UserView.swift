@@ -159,6 +159,7 @@ struct UserView: View {
             .onChange(of: editMode) {
                 if !isEditing {
                     vm.addTrophy(Trophies.edit)
+                    vm.load()
                 }
             }
             .sheet(isPresented: $vm.showLocation) {
