@@ -52,6 +52,7 @@ struct MoviePoster: View {
                     .padding(.top, 2)
                     .lineLimit(2, reservesSpace: true)
                     .multilineTextAlignment(.center)
+                    .frame(maxWidth: MoviePoster.width)
             }
         }
     }
